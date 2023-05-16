@@ -1,20 +1,52 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+.imgElec{
+  height: 56px;
+  width: 200px;
+  padding: 0px;
+  margin: 0 0 0 20px ;
 }
-header{
-  height: 100%;
+.burgerMenù{
+  padding: 0px;
+  margin: 0px;
 }
-.blackNav{
-  height: 20%;
-  background-color: red;
-  height: 30%;
-  width: 100%;
+a{
+  color: black;
+  text-decoration: none;
+}
+.divTextNav{
+  justify-content: center;
+  max-width: max-content;
+  margin: 0 1.5% ;
+}
+
+#pseudo{
+  height: 0.4em;
+  width: 0.8em;
+  position: relative;
+  margin-left: 5px;
+ 
+}
+#pseudo::before,
+#pseudo::after{
+  border-top: 0.1em solid rgb(255, 0, 0);
+  height: 0.1em;
+  width: 0.5em;
+  content: "";
+  position: absolute;
+  display: block;
+  top: 50%;
   
 }
-.navbar{
-  background-color: greenyellow;
-  display: flex;
-  height: 20%;
+#pseudo::before{
+  transform: rotate(45deg);
+  left: 0;
+}
+#pseudo::after{
+  transform: rotate(-45deg);
+  right: 0;
+}
+.divTextNav:hover #pseudo::before{
+  transform: rotate(-45deg);
+}
+.divTextNav:hover #pseudo::after{
+  transform: rotate(45deg);
 }
