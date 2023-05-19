@@ -27,7 +27,7 @@ a{
 }
 #pseudo::before,
 #pseudo::after{
-  border-top: 0.1em solid rgb(255, 0, 0);
+  border-top: 0.1em solid rgb(0, 0, 0);
   height: 0.1em;
   width: 0.5em;
   content: "";
@@ -67,4 +67,13 @@ a{
 .logoSvg{
   height: 24px;
   width: 24px;
+}
+
+@media all and (min-width: 992px) {
+	.navbar .dropdown-menu-end{ right:0; left: auto;  }
+	.navbar .nav-item .dropdown-menu{  display:block; opacity: 0;  visibility: hidden; transition:.3s; margin-top:0;  }
+	/* .navbar .nav-item:hover .nav-link{ color: #fff;  } */
+	.navbar .dropdown-menu.fade-down{ top:80%; transform: rotateX(-75deg); transform-origin: 0% 0%; }
+	.navbar .dropdown-menu.fade-up{ top:180%;  }
+	.navbar .nav-item:hover .dropdown-menu{ transition: .3s; opacity:1; visibility:visible; top:100%; transform: rotateX(0deg); }
 }
