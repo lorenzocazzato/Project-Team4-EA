@@ -24,11 +24,11 @@
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         el_autohide = document.querySelector(".autohide");
-
+        // let navBainca = document.querySelector(".navBianca")
         // add padding-top to bady (if necessary)
         navbar_height = document.querySelector(".navbar").offsetHeight;
         document.body.style.paddingTop = navbar_height + "px";
-
+        
         if (el_autohide) {
           var last_scroll_top = 0;
           window.addEventListener("scroll", function () {
@@ -36,9 +36,13 @@
             if (scroll_top < last_scroll_top) {
               el_autohide.classList.remove("scrolled-down");
               el_autohide.classList.add("scrolled-up");
+              // navBainca.add("scrolled-down2");
+              // navBainca.classList.remove("scrolled-up2");
             } else {
               el_autohide.classList.remove("scrolled-up");
               el_autohide.classList.add("scrolled-down");
+              // navBainca.classList.add("scrolled-up2");
+              // navBainca.classList.remove("scrolled-down2");
             }
             last_scroll_top = scroll_top;
           });
@@ -49,9 +53,9 @@
     </script>
     <!-- fine comportamento barra nera -->
     <!--navbar nera con logo utente -->
-
+<nav class="autohide">
     <nav
-      class="autohide navbar height40px sticky-top darkColor justify-content-end"
+      class=" navbar height40px sticky-top darkColor justify-content-end"
     >
       <div class="container-fluid logoSvg margin0padding0">
         <svg class="logoSvg" style="fill: #f3f3f3">
@@ -274,6 +278,7 @@
       </div>
       <!-- fine div risorse -->
     </nav>
+</nav>
     <!-- fine navbar bianca -->
     <!-- img header -->
     <div class="imgHeader">

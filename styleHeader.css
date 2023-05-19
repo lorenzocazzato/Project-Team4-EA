@@ -8,8 +8,9 @@
   z-index: 1030;
 }
 
+/* comportamento navbar autohide */
 .scrolled-down {
-  transform: translateY(-100%);
+  transform: translateY(-40px);
   transition: all 0.3s ease-in-out;
 }
 
@@ -18,13 +19,12 @@
   transition: all 0.3s ease-in-out;
 }
 
-
 /* componenti navbar bianca */
 .btn{
   height: 100%;
   width: 100%;
 }
-.bottone3punti{
+.btn > .bottone3punti{
   pointer-events: none;
   display: block;
   width: 100%;
@@ -32,9 +32,9 @@
   transform: rotate(-90deg);
   color: #161616;
 }
-.btn:hover svg{
-  
-  transform: scale(2,2);
+
+.btn:hover > .bottone3punti{
+  transform: scale(1.4, 1.4) rotate(-90deg);
   fill: #f50c0c;
   transition: fill .7s,transform .3s;
   transition-duration: 0.7s, 0.3s;
@@ -128,6 +128,11 @@ a{
 .offcanvas-header{
   margin-top: 50px;
 }
-
-
+.offcanvas{
+  bottom: -100vh;
+}
+/* imagini header */
+.imgHeader{
+  margin-top: 55px;
+}
 
