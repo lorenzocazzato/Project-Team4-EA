@@ -20,8 +20,39 @@
   </head>
   <body>
     <!-- Header Matteo -->
-    <!-- navbar nera con logo utente -->
-    <nav class="navbar height40px sticky-top darkColor justify-content-end">
+    <!-- comportamento navbar nera con logo utente -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        el_autohide = document.querySelector(".autohide");
+
+        // add padding-top to bady (if necessary)
+        navbar_height = document.querySelector(".navbar").offsetHeight;
+        document.body.style.paddingTop = navbar_height + "px";
+
+        if (el_autohide) {
+          var last_scroll_top = 0;
+          window.addEventListener("scroll", function () {
+            let scroll_top = window.scrollY;
+            if (scroll_top < last_scroll_top) {
+              el_autohide.classList.remove("scrolled-down");
+              el_autohide.classList.add("scrolled-up");
+            } else {
+              el_autohide.classList.remove("scrolled-up");
+              el_autohide.classList.add("scrolled-down");
+            }
+            last_scroll_top = scroll_top;
+          });
+          // window.addEventListener
+        }
+        // if
+      });
+    </script>
+    <!-- fine comportamento barra nera -->
+    <!--navbar nera con logo utente -->
+
+    <nav
+      class="autohide navbar height40px sticky-top darkColor justify-content-end"
+    >
       <div class="container-fluid logoSvg margin0padding0">
         <svg class="logoSvg" style="fill: #f3f3f3">
           <path
@@ -41,7 +72,7 @@
     </nav>
     <!-- navbar bianca: bottesidebar + menù -->
     <nav
-      class="navbar bg-body-tertiary navBianca"
+      class="navbar bg-body-tertiary navBianca sticky-xxl-top"
       style="
         display: flex;
         flex-wrap: nowrap;
@@ -69,7 +100,7 @@
           aria-labelledby="offcanvasExampleLabel"
         >
           <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Sidebar</h5>
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Tutti i giochi</h5>
             <button
               type="button"
               class="btn-close"
@@ -101,7 +132,7 @@
         style="display: flex"
       >
         <a class="nav-link" href="#"> Giochi </a>
-        <ul class="dropdown-menu dropdown-menu-start fade-up">
+        <ul class="dropdown-menu dropdown-menu-start fade-down">
           <div style="display: flex; padding: 20px">
             <div>
               <a class="dropdown-item" href="#"><h4>Esplora i Giochi</h4></a>
@@ -225,11 +256,42 @@
     </nav>
     <!-- fine navbar bianca -->
     <!-- img header -->
-    <div class="container margin0padding0">
+    <div class="imgHeader">
       <img
+        class="img-fluid"
         src="img E.A\eacom-apex-s17-arsenal-hero-md-7x2-xl.jpg.adapt.crop7x2.1920w.jpg"
       />
     </div>
+    <!-- banner sotto img grande -->
+    <div class="imgBanner">
+      <img
+        class="img-fluid"
+        src="img E.A\banner stretto.jpg.adapt.crop1x1.767p.jpg"
+        alt=""
+      />
+    </div>
+    <ul>
+      <li>ho</li>
+      <li>bisogno</li>
+      <li>dello</li>
+      <li>scroll</li>
+      <li>sdas</li>
+      <li>asda</li>
+      <li>asdas</li>
+      <li>dasd</li>
+      <li>asdas</li>
+      <li>asdas</li>
+      <li>adasd</li>
+      <li>adasdas</li>
+      <li>adasdas</li>
+      <li>asdasdas</li>
+      <li>asdasda</li>
+      <li>asdasdas</li>
+      <li>asdasdad</li>
+      <li>dadas</li>
+      <li>asdasd</li>
+      <li>sdasda</li>
+    </ul>
 
     <!-- Fine Header Matteo -->
 
