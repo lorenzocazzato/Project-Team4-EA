@@ -84,13 +84,31 @@
       <!-- bottone sidebar -->
       <div class="container-md burgerMenù" style="width: auto">
         <button
-          class="btn btn-light text-nowrap"
+          class="btn"
           type="button"
           data-bs-toggle="offcanvas"
           data-bs-target="#offcanvasExample"
           aria-controls="offcanvasExample"
         >
-          <span class="navbar-toggler-icon"></span>
+          <svg class="bottone3punti"
+            viewBox="0 0 16 16"
+            preserveAspectRatio="xMidYMid meet"
+            focusable="false"
+            style="
+              pointer-events: none;
+              display: block;
+              width: 20px;
+              height: 24px;
+              margin-top: 3px;
+            "
+          >
+            <g>
+              <circle cx="14.143" cy="8" r="1.857"></circle>
+              <circle cx="7.996" cy="8" r="1.857"></circle>
+              <circle cx="1.857" cy="8" r="1.857"></circle>
+            </g>
+          </svg>
+          <!-- <span class="navbar-toggler-icon"></span> -->
         </button>
         <!-- sidebar -->
         <div
@@ -100,7 +118,9 @@
           aria-labelledby="offcanvasExampleLabel"
         >
           <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Tutti i giochi</h5>
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">
+              Tutti i giochi
+            </h5>
             <button
               type="button"
               class="btn-close"
