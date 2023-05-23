@@ -23,6 +23,7 @@
 .btn{
   height: 100%;
   width: 100%;
+  --bs-btn-border-width: transparent; 
 }
 .btn > .bottone3punti{
   pointer-events: none;
@@ -92,9 +93,11 @@ a{
 }
 .divTextNav:hover #pseudo::before{
   transform: rotate(-45deg);
+  transition: transform var(--ea-transition-duration) var(--ea-transition-easing);
 }
 .divTextNav:hover #pseudo::after{
   transform: rotate(45deg);
+  transition: transform var(--ea-transition-duration) var(--ea-transition-easing);
 }
 
 .darkColor{
