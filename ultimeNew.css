@@ -1,85 +1,80 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.ultimeNewsTitle{
-    display: flex;
-    justify-content: center;
-    font-size: 44px;
-    color: #161616;
+.ultimeNewsTitle {
+  display: flex;
+  justify-content: center;
+  font-size: 44px;
+  color: #161616;
 }
-.spazioSopra{
-    padding: 50px;
+.spazioSopra {
+  padding: 50px;
 }
-.titleCard{
-    color: #ff4747;
-    font-size: 16px;
-    
-    
+.titleCard {
+  color: #ff4747;
+  font-size: 16px;
 }
 
-.dateYear{
-    font-size: 16px;
-    color: #161616;
-    
+.dateYear {
+  font-size: 16px;
+  color: #161616;
 }
 
-
-
-.subTitle{
-    font-size: 24px;
-    color: #161616;
-    
-   
+.subTitle {
+  font-size: 24px;
+  color: #161616;
 }
 
-.prova{
-    padding: 0;
-    border: none;
-    border-radius: 0%;
+.prova {
+  padding: 0;
+  border: none;
+  border-radius: 0%;
 }
 
 .pippo {
-    margin-top: 1rem;
+  margin-top: 1rem;
 }
 
-.containerTap {
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-    border-bottom: solid 1px gray;
+.containerBtn {
+  display: flex;
+  justify-content: center;
+  gap: 2px;
+  border-bottom: solid 1px lightgray;
 }
 
-
-.provaShadow{
-   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-   transition: 0.3s;
+.cardSection {
+  display: flex;
+  border: 0px;
+  background: transparent;
+  align-items: center;
+  height: 100%;
+  font-size: 1rem;
+  padding: 10px ;
+  font-weight: 500;
+  cursor: pointer;
+  border-right: 1px solid lightgray;
 }
-
-.provaShadow:hover{
-    transform: translate(0, -10px);
-    box-shadow: 0 10px 14px 0 rgba(0,0,0,0.6), 0 10px 25px 0 rgba(0,0,0,0.26);
-}
-
-
-.container_dentro {
-    height: 100%;
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    overflow-y: hidden;
-    gap: 3%;
-    max-width: 600px;
+.cardSection:active{
+    border-bottom: 3px solid #ff4747;
+    background: rgba(22, 22, 22, 0.8);
+  }
+  .cardSection:hover{
+    background: rgba(22, 22, 22, 0.8);
     
   }
-  
+.provaShadow {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: 0.3s;
+}
 
-  .none {
-    display: none;
-  }
-   .yes{
-    display: block;
-   }
-  
+.provaShadow:hover {
+  transform: translate(0, -10px);
+  box-shadow: 0 10px 14px 0 rgba(0, 0, 0, 0.6),
+    0 10px 25px 0 rgba(0, 0, 0, 0.26);
+}
 
+.none {
+  display: none;
+}
