@@ -4,16 +4,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="ultimeNew.css">
-    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="ultimeNew.css" />
+    <link rel="stylesheet" href="footer.css" />
     <link href="styleHeader.css" rel="stylesheet" media="screen" />
     <title>Document</title>
     <!-- <link href="css/stili-custom.css" rel="stylesheet" media="screen"> -->
   </head>
   <body>
     <!-- Header Matteo -->
+
     <!--navbar nera con logo utente -->
 <nav class="autohide" id="darkColor">
     <nav
@@ -24,14 +30,57 @@
           <path
             style="color: #f3f3f3"
             d="M7.5,9A4.5,4.5,0,1,0,3,4.5,4.5,4.5,0,0,0,7.5,
+
+    <!-- comportamento navbar nera con logo utente -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        el_autohide = document.querySelector(".autohide");
+        // let navBainca = document.querySelector(".navBianca")
+        // add padding-top to bady (if necessary)
+        navbar_height = document.querySelector(".navbar").offsetHeight;
+        document.body.style.paddingTop = navbar_height + "px";
+
+        if (el_autohide) {
+          var last_scroll_top = 0;
+          window.addEventListener("scroll", function () {
+            let scroll_top = window.scrollY;
+            if (scroll_top < last_scroll_top) {
+              el_autohide.classList.remove("scrolled-down");
+              el_autohide.classList.add("scrolled-up");
+              // navBainca.add("scrolled-down2");
+              // navBainca.classList.remove("scrolled-up2");
+            } else {
+              el_autohide.classList.remove("scrolled-up");
+              el_autohide.classList.add("scrolled-down");
+              // navBainca.classList.add("scrolled-up2");
+              // navBainca.classList.remove("scrolled-down2");
+            }
+            last_scroll_top = scroll_top;
+          });
+          // window.addEventListener
+        }
+        // if
+      });
+    </script>
+    <!-- fine comportamento barra nera -->
+    <!--navbar nera con logo utente -->
+    <nav class="autohide">
+      <nav class="navbar height40px sticky-top darkColor justify-content-end">
+        <div class="container-fluid logoSvg margin0padding0">
+          <svg class="logoSvg" style="fill: #f3f3f3">
+            <path
+              style="color: #f3f3f3"
+              d="M7.5,9A4.5,4.5,0,1,0,3,4.5,4.5,4.5,0,0,0,7.5,
+
             9Zm0-7A2.5,2.5,0,1,1,5,4.5,2.5,2.5,0,0,1,7.5,2Z"
-          ></path>
-          <path
-            style="color: #f3f3f3"
-            d="M8,10.028s-0.254-.007-0.506-0.007S7,10.023,7,10.028c-7.033.283-7,
+            ></path>
+            <path
+              style="color: #f3f3f3"
+              d="M8,10.028s-0.254-.007-0.506-0.007S7,10.023,7,10.028c-7.033.283-7,
             3.558-7,6.972H15C15,13.586,14.985,10.312,8,10.028ZM8,15H2.056c0.2-1.946,1.077
             -2.815,5.024-2.974l0.1,0H7.494l0.326,0,0.1,0c3.928,0.16,4.819,
             1.03,5.022,2.974H8Z"
+
           ></path>
         </svg>
       </div>
@@ -74,16 +123,95 @@
               <circle cx="7.996" cy="8" r="1.857"></circle>
               <circle cx="1.857" cy="8" r="1.857"></circle>
             </g>
+
+            ></path>
+
           </svg>
-          <!-- <span class="navbar-toggler-icon"></span> -->
-        </button>
-        <!-- sidebar -->
+        </div>
+      </nav>
+      <!-- navbar bianca: bottesidebar + menù -->
+      <nav
+        class="navbar bg-body-tertiary navBianca sticky-xxl-top"
+        style="
+          display: flex;
+          flex-wrap: nowrap;
+          justify-content: flex-start;
+          height: 56px;
+          padding: 0px;
+        "
+      >
+        <!-- bottone sidebar -->
+        <div class="container-md burgerMenù" style="width: auto">
+          <button
+            class="btn"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasExample"
+            aria-controls="offcanvasExample"
+          >
+            <svg
+              class="bottone3punti"
+              viewBox="0 0 16 16"
+              preserveAspectRatio="xMidYMid meet"
+              focusable="false"
+              style="
+                pointer-events: none;
+                display: block;
+                width: 20px;
+                height: 24px;
+                margin-top: 3px;
+              "
+            >
+              <g>
+                <circle cx="14.143" cy="8" r="1.857"></circle>
+                <circle cx="7.996" cy="8" r="1.857"></circle>
+                <circle cx="1.857" cy="8" r="1.857"></circle>
+              </g>
+            </svg>
+            <!-- <span class="navbar-toggler-icon"></span> -->
+          </button>
+          <!-- sidebar -->
+          <div
+            class="offcanvas offcanvas-start"
+            tabindex="-1"
+            id="offcanvasExample"
+            aria-labelledby="offcanvasExampleLabel"
+          >
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasExampleLabel">
+                Tutti i giochi
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <div>Lista + CARD</div>
+            </div>
+          </div>
+        </div>
+        <!--voci dentro la navbar binca -->
+        <!-- img imgElec -->
+        <div class="container divTextNav imgElec">
+          <a href="">
+            <img
+              src="img E.A\ea-wordmark-network-nav-coral.svg"
+              alt="Bootstrap"
+              style="width: auto"
+            />
+          </a>
+        </div>
+        <!-- menù dropdown -->
+        <!-- giochi -->
         <div
-          class="offcanvas offcanvas-start"
-          tabindex="-1"
-          id="offcanvasExample"
-          aria-labelledby="offcanvasExampleLabel"
+          class="navbar-collapse nav-item divTextNav"
+          id="main_nav"
+          style="display: flex"
         >
+
           <div class="offcanvas-header">
             <a href="" class="offcanvas-title" id="offcanvasExampleLabel">
               Tutti i giochi
@@ -101,150 +229,132 @@
           <div class="offcanvas-body">
             <div>Lista + CARD</div>
           </div>
+
+          <a class="nav-link" href="#"> Giochi </a>
+          <ul class="dropdown-menu dropdown-menu-start fade-down">
+            <div style="display: flex; padding: 20px">
+              <div>
+                <a class="dropdown-item" href="#"><h4>Esplora i Giochi</h4></a>
+                <a class="dropdown-item" href="#"> Ultimi Giochi</a>
+                <a class="dropdown-item" href="#"> Prossimamente</a>
+                <a class="dropdown-item" href="#"> giochi gratuiti</a>
+                <a class="dropdown-item" href="#"> EA SPORTS </a>
+                <a class="dropdown-item" href="#"> EA ORIGINALS</a>
+                <a class="dropdown-item" href="#"> Libreiria dei giochi </a>
+                <a class="dropdown-item" href="#"> offerte EA app </a>
+              </div>
+              <div>
+                <a class="dropdown-item" href="#"><h4>Piattaforme</h4></a>
+                <a class="dropdown-item" href="#"> PC</a>
+                <a class="dropdown-item" href="#"> PlayStation®5 </a>
+                <a class="dropdown-item" href="#"> Xbox Series X </a>
+                <a class="dropdown-item" href="#"> Nintendo Switch™ </a>
+                <a class="dropdown-item" href="#"> Cellulari </a>
+              </div>
+            </div>
+          </ul>
+          <div id="pseudo"></div>
+
         </div>
-      </div>
-      <!--voci dentro la navbar binca -->
-      <!-- img imgElec -->
-      <div class="container divTextNav imgElec">
-        <a href="">
-          <img
-            src="img E.A\ea-wordmark-network-nav-coral.svg"
-            alt="Bootstrap"
-            style="width: auto"
-          />
-        </a>
-      </div>
-      <!-- menù dropdown -->
-      <!-- giochi -->
-      <div
-        class="navbar-collapse nav-item divTextNav"
-        id="main_nav"
-        style="display: flex"
-      >
-        <a class="nav-link" href="#"> Giochi </a>
-        <ul class="dropdown-menu dropdown-menu-start fade-down">
-          <div style="display: flex; padding: 20px">
-            <div>
-              <a class="dropdown-item" href="#"><h4>Esplora i Giochi</h4></a>
-              <a class="dropdown-item" href="#"> Ultimi Giochi</a>
-              <a class="dropdown-item" href="#"> Prossimamente</a>
-              <a class="dropdown-item" href="#"> giochi gratuiti</a>
-              <a class="dropdown-item" href="#"> EA SPORTS </a>
-              <a class="dropdown-item" href="#"> EA ORIGINALS</a>
-              <a class="dropdown-item" href="#"> Libreiria dei giochi </a>
-              <a class="dropdown-item" href="#"> offerte EA app </a>
-            </div>
-            <div>
-              <a class="dropdown-item" href="#"><h4>Piattaforme</h4></a>
-              <a class="dropdown-item" href="#"> PC</a>
-              <a class="dropdown-item" href="#"> PlayStation®5 </a>
-              <a class="dropdown-item" href="#"> Xbox Series X </a>
-              <a class="dropdown-item" href="#"> Nintendo Switch™ </a>
-              <a class="dropdown-item" href="#"> Cellulari </a>
-            </div>
-          </div>
-        </ul>
-        <div id="pseudo"></div>
-      </div>
-      <!-- fine div Giochi.// -->
-      <!-- altre esperienze -->
-      <div
-        class="navbar-collapse nav-item divTextNav"
-        id="main_nav"
-        style="display: flex"
-      >
-        <a class="nav-link" href="#"> Altre Esperienze </a>
-        <ul class="dropdown-menu dropdown-menu-start fade-down">
-          <li><a class="dropdown-item" href="#"> EA Play</a></li>
-          <li><a class="dropdown-item" href="#"> l'EA app </a></li>
-          <li>
-            <a class="dropdown-item" href="#"> Competizioni videoludiche</a>
-          </li>
-          <li>
-            <a class="dropdown-item" href="#"> Diretta di EA Play </a>
-          </li>
-          <li>
-            <a class="dropdown-item" href="#"> Test di gioco </a>
-          </li>
-        </ul>
-        <div id="pseudo"></div>
-      </div>
-      <!-- fine div altre esperienze -->
-      <!-- Informazioni -->
-      <div
-        class="navbar-collapse nav-item divTextNav"
-        id="main_nav"
-        style="display: flex"
-      >
-        <a class="nav-link" href="#"> Informazioni </a>
-        <ul class="dropdown-menu dropdown-menu-start fade-down">
-          <li><a class="dropdown-item" href="#"> Società</a></li>
-          <li><a class="dropdown-item" href="#"> EA studi </a></li>
-          <li>
-            <a class="dropdown-item" href="#"> lavora con noi</a>
-          </li>
-          <li>
-            <a class="dropdown-item" href="#"> la nostra tecnologia </a>
-          </li>
-          <li><a class="dropdown-item" href="#"> EA partners</a></li>
-          <li><a class="dropdown-item" href="#"> notizie </a></li>
-          <li><a class="dropdown-item" href="#"> inside EA</a></li>
-        </ul>
-        <div id="pseudo"></div>
-      </div>
-      <!-- fine div Informazioni -->
-      <!-- impegni -->
-      <div
-        class="navbar-collapse nav-item divTextNav"
-        id="main_nav"
-        style="display: flex"
-      >
-        <a class="nav-link" href="#"> Impegni </a>
-        <ul class="dropdown-menu dropdown-menu-start fade-down">
-          <li>
-            <a class="dropdown-item" href="#"> I nostri impegni </a>
-          </li>
-          <li>
-            <a class="dropdown-item" href="#"> gioco positivo </a>
-          </li>
-          <li>
-            <a class="dropdown-item" href="#"> diversità inclusione</a>
-          </li>
-          <li>
-            <a class="dropdown-item" href="#"> impatto sociale </a>
-          </li>
-          <li>
-            <a class="dropdown-item" href="#"> persone e cultura</a>
-          </li>
-          <li><a class="dropdown-item" href="#"> ambiente </a></li>
-        </ul>
-        <div id="pseudo"></div>
-      </div>
-      <!-- fine div impegni -->
-      <!-- risorse -->
-      <div
-        class="navbar-collapse nav-item divTextNav"
-        id="main_nav"
-        style="display: flex"
-      >
-        <a class="nav-link" href="#"> Risorse </a>
-        <ul class="dropdown-menu dropdown-menu-start fade-down">
-          <li><a class="dropdown-item" href="#"> aiuto</a></li>
-          <li><a class="dropdown-item" href="#"> forum </a></li>
-          <li>
-            <a class="dropdown-item" href="#"> filtro famiglia</a>
-          </li>
-          <li>
-            <a class="dropdown-item" href="#"> accessibilità</a>
-          </li>
-          <li><a class="dropdown-item" href="#"> Stampa</a></li>
-          <li><a class="dropdown-item" href="#"> investitori </a></li>
-        </ul>
-        <div id="pseudo"></div>
-      </div>
-      <!-- fine div risorse -->
+        <!-- fine div Giochi.// -->
+        <!-- altre esperienze -->
+        <div
+          class="navbar-collapse nav-item divTextNav"
+          id="main_nav"
+          style="display: flex"
+        >
+          <a class="nav-link" href="#"> Altre Esperienze </a>
+          <ul class="dropdown-menu dropdown-menu-start fade-down">
+            <li><a class="dropdown-item" href="#"> EA Play</a></li>
+            <li><a class="dropdown-item" href="#"> l'EA app </a></li>
+            <li>
+              <a class="dropdown-item" href="#"> Competizioni videoludiche</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#"> Diretta di EA Play </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#"> Test di gioco </a>
+            </li>
+          </ul>
+          <div id="pseudo"></div>
+        </div>
+        <!-- fine div altre esperienze -->
+        <!-- Informazioni -->
+        <div
+          class="navbar-collapse nav-item divTextNav"
+          id="main_nav"
+          style="display: flex"
+        >
+          <a class="nav-link" href="#"> Informazioni </a>
+          <ul class="dropdown-menu dropdown-menu-start fade-down">
+            <li><a class="dropdown-item" href="#"> Società</a></li>
+            <li><a class="dropdown-item" href="#"> EA studi </a></li>
+            <li>
+              <a class="dropdown-item" href="#"> lavora con noi</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#"> la nostra tecnologia </a>
+            </li>
+            <li><a class="dropdown-item" href="#"> EA partners</a></li>
+            <li><a class="dropdown-item" href="#"> notizie </a></li>
+            <li><a class="dropdown-item" href="#"> inside EA</a></li>
+          </ul>
+          <div id="pseudo"></div>
+        </div>
+        <!-- fine div Informazioni -->
+        <!-- impegni -->
+        <div
+          class="navbar-collapse nav-item divTextNav"
+          id="main_nav"
+          style="display: flex"
+        >
+          <a class="nav-link" href="#"> Impegni </a>
+          <ul class="dropdown-menu dropdown-menu-start fade-down">
+            <li>
+              <a class="dropdown-item" href="#"> I nostri impegni </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#"> gioco positivo </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#"> diversità inclusione</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#"> impatto sociale </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#"> persone e cultura</a>
+            </li>
+            <li><a class="dropdown-item" href="#"> ambiente </a></li>
+          </ul>
+          <div id="pseudo"></div>
+        </div>
+        <!-- fine div impegni -->
+        <!-- risorse -->
+        <div
+          class="navbar-collapse nav-item divTextNav"
+          id="main_nav"
+          style="display: flex"
+        >
+          <a class="nav-link" href="#"> Risorse </a>
+          <ul class="dropdown-menu dropdown-menu-start fade-down">
+            <li><a class="dropdown-item" href="#"> aiuto</a></li>
+            <li><a class="dropdown-item" href="#"> forum </a></li>
+            <li>
+              <a class="dropdown-item" href="#"> filtro famiglia</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#"> accessibilità</a>
+            </li>
+            <li><a class="dropdown-item" href="#"> Stampa</a></li>
+            <li><a class="dropdown-item" href="#"> investitori </a></li>
+          </ul>
+          <div id="pseudo"></div>
+        </div>
+        <!-- fine div risorse -->
+      </nav>
     </nav>
-</nav>
     <!-- fine navbar bianca -->
     <!-- img header -->
     <div class="imgHeader">
@@ -271,146 +381,963 @@
     <!-- Ultime Uscite Gabriele -->
     <div id="UsciteGabriele">
       <h3 class="ultimeNewsTitle">Ultime novita`</h3>
-      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="20" height="256" viewBox="0 0 256 256" xml:space="preserve" display="none">
-
-        <defs>
-        </defs>
-        <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
-          <path d="M 65.75 90 c 0.896 0 1.792 -0.342 2.475 -1.025 c 1.367 -1.366 1.367 -3.583 0 -4.949 L 29.2 45 L 68.225 5.975 c 1.367 -1.367 1.367 -3.583 0 -4.95 c -1.367 -1.366 -3.583 -1.366 -4.95 0 l -41.5 41.5 c -1.367 1.366 -1.367 3.583 0 4.949 l 41.5 41.5 C 63.958 89.658 64.854 90 65.75 90 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-        </g>
-        </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="20" height="256" viewBox="0 0 256 256" xml:space="preserve" display="none">
-
-          <defs>
-          </defs>
-          <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
-            <path d="M 24.25 90 c -0.896 0 -1.792 -0.342 -2.475 -1.025 c -1.367 -1.366 -1.367 -3.583 0 -4.949 L 60.8 45 L 21.775 5.975 c -1.367 -1.367 -1.367 -3.583 0 -4.95 c 1.367 -1.366 3.583 -1.366 4.95 0 l 41.5 41.5 c 1.367 1.366 1.367 3.583 0 4.949 l -41.5 41.5 C 26.042 89.658 25.146 90 24.25 90 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-          </g>
-          </svg>
-      <div class="containerDiv">
-        <div class="container_dentro ">
-          <div class="trigger" id="Notizie Ea"><h2>Notizie Ea</h2></div>
-          <div class="trigger" id="Ea Play"><h2>Ea Play</h2></div>
-          <div class="trigger"><h2>Fifa</h2></div>
-          <div class="trigger"><h2>F1</h2></div>
-          <div class="trigger"><h2>Apex Legends</h2></div>
-          <div class="trigger"><h2>The Sims™ 4</h2></div>
-          <div class="trigger"><h2>Battlefield</h2></div>
-          <div class="trigger"><h2>Inside EA</h2></div>
-        </div>
-      </div>
-      
-      
-      <div class="container spazioSopra provaScreen" id="n1">
-        <div class="row column-gap-3 justify-content-center">
-          <div class="card prova provaShadow " style="width: 20rem;">
-            <img src="/Project-Team4-EA/ultimeNewImg/eaCard3.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h2><span class="titleCard">Electronic Arts Inc.</span> <span class="dateYear">18-apr-2023</span></h2>
-              <h3 class="subTitle">Una retrospettiva sugli ultimi due anni di Full Circle</h3>
-              <p class="card-text">    Il vicepresidente e il direttore generale Dan McCulloch racconta come lo studio Full Circle sia cambiato, cresciuto e abbia preso forma negli ultimi due anni.</p>
-            </div>
-          </div>
-          <div class="card prova provaShadow" style="width: 20rem;">
-            <img src="/Project-Team4-EA/ultimeNewImg/eaCard2.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h2><span class="titleCard">Electronic Arts Inc.</span> <span class="dateYear">13-apr-2023</span></h2>
-              <h3 class="subTitle">Maxis: creare un'esperienza di gioco più inclusiva</h3>
-              <p class="card-text">  Phillip Ring, produttore esecutivo di The Sims 4, illustra alcune linee guida della squadra di Maxis sullo sviluppo di contenuti DEI.</p>
-            </div>
-          </div>
-          <div class="card prova provaShadow" style="width: 20rem;">
-            <img src="/Project-Team4-EA/ultimeNewImg/eaCard.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h2><span class="titleCard">Electronic Arts Inc.</span> <span class="dateYear">6-apr-2023</span></h2>
-              <h3 class="subTitle">TI PRESENTIAMO EA SPORTS FC™, IL NUOVO CAPITOLO DEL GIOCO PIÙ BELLO DEL MON…</h3>
-              <p class="card-text">   
-        
-                I fan possono iscriversi oggi stesso per scoprire il futuro interattivo del calcio e informazioni dettagliate sul prodotto in arrivo a luglio
-            
-            </p>
-            </div>
-        </div>
-        </div>
-        <div class="row column-gap-3 justify-content-center pippo" >
-        <div class="card prova provaShadow" style="width: 20rem;">
-          <img src="/Project-Team4-EA/ultimeNewImg/eaCard4.png" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h2><span class="titleCard">Electronic Arts Inc.</span> <span class="dateYear">24-mar-2023</span></h2>
-            <h3 class="subTitle">Costruire San Sequoia</h3>
-            <p class="card-text">    
-        
-              I progettisti di The Sims 4 Cresciamo Insieme Expansion Pack parlano di ciò che ha ispirato l'espansione incentrata sulla famiglia
-          
-          </p>
-          </div>
-        </div>
-        <div class="card prova provaShadow" style="width: 20rem;">
-          <img src="/Project-Team4-EA/ultimeNewImg/eaCard5.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h2><span class="titleCard">Electronic Arts Inc.</span> <span class="dateYear">3-apr-2023</span></h2>
-            <h3 class="subTitle">Max Verstappen firma con EA SPORTS™</h3>
-            <p class="card-text">  
-        
-              Il pluricampione del mondo in carica di Formula 1® sarà presente nei titoli EA SPORTS™.
-          
-          </p>
-          </div>
-        </div>
-        <div class="card prova provaShadow" style="width: 20rem;">
-          <img src="/Project-Team4-EA/ultimeNewImg/eaCard6.png" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h2><span class="titleCard">Electronic Arts Inc.</span> <span class="dateYear">31-gen-2023</span></h2>
-            <h3 class="subTitle">Aggiornamenti di Electronic Arts sulle strategie di Apex Legends Mobile e B…</h3>
-            <p class="card-text">    
-        
-              Apex Legends Mobile e Battlefield Mobile chiudono i battenti per concentrarsi su nuove strategie
-          
-            </p>
-          </div>
-        </div>
-
-     
-
-    </div>
-      
-  </div>
-    <!-- Fine Ultime Uscite Gabriele -->
-
-   <!-- Footer Lorenzo -->
-    <div id="FooterLorenzo" , class="footerlorenzo">
-      <div class="contentJoin">
-     <div class="imgContainer">
-       <img class = "img-fluid" src="/Project-Team4-EA/Media/hero-medium-console-7x2-xl.jpg.adapt.crop5x2.1455w.jpg" alt=""> 
-        
-     </div>
-       <div class="container item1">
       <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="240"
-          height="101"
-          viewBox="0 0 240 101"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        version="1.1"
+        width="20"
+        height="256"
+        viewBox="0 0 256 256"
+        xml:space="preserve"
+        display="none"
+      >
+        <defs></defs>
+        <g
+          style="
+            stroke: none;
+            stroke-width: 0;
+            stroke-dasharray: none;
+            stroke-linecap: butt;
+            stroke-linejoin: miter;
+            stroke-miterlimit: 10;
+            fill: none;
+            fill-rule: nonzero;
+            opacity: 1;
+          "
+          transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)"
         >
           <path
-            fill="#FF4747"
-            fill-rule="evenodd"
-            d="M94.84828,8.76968 L94.84828,61.49768 L105.24348,61.49768 L105.24348,42.28928 L118.04948,42.28928 C128.36828,42.28928 136.05148,35.13448 136.05148,25.41728 C136.05148,15.77488 128.66948,8.76968 118.42588,8.76968 L94.84828,8.76968 Z M117.29668,33.40208 L105.24348,33.40208 L105.24348,18.03528 L117.29668,18.03528 C122.26748,18.03528 125.73268,21.19888 125.73268,25.71888 C125.73268,30.23808 122.26748,33.40208 117.29668,33.40208 L117.29668,33.40208 Z M150.51348,5.75768 L140.94788,8.76968 L140.94788,61.49768 L150.51348,61.49768 L150.51348,5.75768 Z M173.78788,62.02568 C178.45908,62.02568 182.67748,60.29328 185.84108,57.35448 L185.84108,61.49768 L195.40668,61.49768 L195.40668,23.91128 L185.84108,23.91128 L185.84108,28.05288 C182.82748,25.04048 178.68388,23.30808 174.16588,23.30808 C164.37388,23.30808 155.48428,31.44288 155.48428,42.66608 C155.48428,53.88928 164.22228,62.02568 173.78788,62.02568 L173.78788,62.02568 Z M175.44588,53.43768 C169.64668,53.43768 164.97508,48.99328 164.97508,42.66608 C164.97508,36.33888 169.64668,31.89448 175.44588,31.89448 C181.32108,31.89448 185.91588,36.33888 185.91588,42.66608 C185.91588,48.99328 181.32108,53.43768 175.44588,53.43768 L175.44588,53.43768 Z M239.99988,23.91128 L229.98148,23.91128 L219.28428,46.05608 L208.36268,23.91128 L197.66708,23.91128 L213.78668,56.75168 L203.01508,78.14528 L213.41028,78.14528 L239.99988,23.91128 Z M54.90148,45.86888 L51.83028,40.96608 L42.86348,40.96608 L45.93948,36.05448 L48.77228,36.05448 L45.34828,30.58728 L35.79628,45.86888 L10.31268,45.86888 L16.44828,36.05448 L11.94308,36.05448 L15.00588,31.14328 L34.70428,31.14328 L31.63988,36.05448 L22.24468,36.05448 L19.17348,40.96608 L33.07148,40.96608 L45.34828,21.31808 L60.69108,45.86888 L54.90148,45.86888 Z M21.14388,21.31808 L41.34988,21.31808 L38.27868,26.23168 L18.07468,26.23168 L21.14388,21.31808 Z M35.14788,8e-05 C15.73708,8e-05 -0.00012,15.73808 -0.00012,35.15008 C-0.00012,54.56648 15.73708,70.29768 35.14788,70.29768 C54.55828,70.29768 70.29788,54.56648 70.29788,35.15008 C70.29788,15.73808 54.55828,8e-05 35.14788,8e-05 L35.14788,8e-05 Z"
+            d="M 65.75 90 c 0.896 0 1.792 -0.342 2.475 -1.025 c 1.367 -1.366 1.367 -3.583 0 -4.949 L 29.2 45 L 68.225 5.975 c 1.367 -1.367 1.367 -3.583 0 -4.95 c -1.367 -1.366 -3.583 -1.366 -4.95 0 l -41.5 41.5 c -1.367 1.366 -1.367 3.583 0 4.949 l 41.5 41.5 C 63.958 89.658 64.854 90 65.75 90 z"
+            style="
+              stroke: none;
+              stroke-width: 1;
+              stroke-dasharray: none;
+              stroke-linecap: butt;
+              stroke-linejoin: miter;
+              stroke-miterlimit: 10;
+              fill: rgb(0, 0, 0);
+              fill-rule: nonzero;
+              opacity: 1;
+            "
+            transform=" matrix(1 0 0 1 0 0) "
+            stroke-linecap="round"
           />
-        </svg>
-        <button class="JoinNow">Iscriviti Subito</button>
-        <h6>
-          Non limitarti al gioco. Gioca al massimo. Sblocca ricompense
-          esclusive, contenuti per i soli membri e una libreria dei migliori
-          titoli.
-        </h6>
-       </div>
+        </g>
+      </svg>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        version="1.1"
+        width="20"
+        height="256"
+        viewBox="0 0 256 256"
+        xml:space="preserve"
+        display="none"
+      >
+        <defs></defs>
+        <g
+          style="
+            stroke: none;
+            stroke-width: 0;
+            stroke-dasharray: none;
+            stroke-linecap: butt;
+            stroke-linejoin: miter;
+            stroke-miterlimit: 10;
+            fill: none;
+            fill-rule: nonzero;
+            opacity: 1;
+          "
+          transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)"
+        >
+          <path
+            d="M 24.25 90 c -0.896 0 -1.792 -0.342 -2.475 -1.025 c -1.367 -1.366 -1.367 -3.583 0 -4.949 L 60.8 45 L 21.775 5.975 c -1.367 -1.367 -1.367 -3.583 0 -4.95 c 1.367 -1.366 3.583 -1.366 4.95 0 l 41.5 41.5 c 1.367 1.366 1.367 3.583 0 4.949 l -41.5 41.5 C 26.042 89.658 25.146 90 24.25 90 z"
+            style="
+              stroke: none;
+              stroke-width: 1;
+              stroke-dasharray: none;
+              stroke-linecap: butt;
+              stroke-linejoin: miter;
+              stroke-miterlimit: 10;
+              fill: rgb(0, 0, 0);
+              fill-rule: nonzero;
+              opacity: 1;
+            "
+            transform=" matrix(1 0 0 1 0 0) "
+            stroke-linecap="round"
+          />
+        </g>
+      </svg>
+      <div class="containerBtn">
+        <div class="buttonCard">
+          <button class="cardSection notizieEa">Notizie Ea</button>
+        </div>
+        <div class="buttonCard">
+          <button class="cardSection fifa">FIFA</button>
+        </div>
+        <div class="buttonCard">
+          <button class="cardSection starWars">Star Wars</button>
+        </div>
+        <div class="buttonCard">
+          <button class="cardSection apexLegends">Apex Legends</button>
+        </div>
+        <div class="buttonCard">
+          <button class="cardSection theSims">The Sims 4</button>
+        </div>
+        <div class="buttonCard">
+          <button class="cardSection f1">F1</button>
+        </div>
+        <div class="buttonCard">
+          <button class="cardSection battlefield">Battlefield</button>
+        </div>
+      </div>
+
+      <div class="container spazioSopra provaScreen notizieEA2" id="n1">
+        <div class="row column-gap-3 justify-content-center">
+          <div class="card prova provaShadow" style="width: 21rem">
+            <img
+              src="/ultimeNewImg/eaCard3.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h2>
+                <span class="titleCard">Electronic Arts Inc.</span>
+                <span class="dateYear">18-apr-2023</span>
+              </h2>
+              <h3 class="subTitle">
+                Una retrospettiva sugli ultimi due anni di Full Circle
+              </h3>
+              <p class="card-text">
+                Il vicepresidente e il direttore generale Dan McCulloch racconta
+                come lo studio Full Circle sia cambiato, cresciuto e abbia preso
+                forma negli ultimi due anni.
+              </p>
+            </div>
+          </div>
+          <div class="card prova provaShadow" style="width: 21rem">
+            <img
+              src="/ultimeNewImg/eaCard2.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h2>
+                <span class="titleCard">Electronic Arts Inc.</span>
+                <span class="dateYear">13-apr-2023</span>
+              </h2>
+              <h3 class="subTitle">
+                Maxis: creare un'esperienza di gioco più inclusiva
+              </h3>
+              <p class="card-text">
+                Phillip Ring, produttore esecutivo di The Sims 4, illustra
+                alcune linee guida della squadra di Maxis sullo sviluppo di
+                contenuti DEI.
+              </p>
+            </div>
+          </div>
+          <div class="card prova provaShadow" style="width: 21rem">
+            <img
+              src="/ultimeNewImg/eaCard.png"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h2>
+                <span class="titleCard">Electronic Arts Inc.</span>
+                <span class="dateYear">6-apr-2023</span>
+              </h2>
+              <h3 class="subTitle">
+                TI PRESENTIAMO EA SPORTS FC™, IL NUOVO CAPITOLO DEL GIOCO PIÙ
+                BELLO DEL MON…
+              </h3>
+              <p class="card-text">
+                I fan possono iscriversi oggi stesso per scoprire il futuro
+                interattivo del calcio e informazioni dettagliate sul prodotto
+                in arrivo a luglio
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row column-gap-3 justify-content-center pippo">
+          <div class="card prova provaShadow" style="width: 21rem">
+            <img
+              src="/ultimeNewImg/eaCard4.png"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h2>
+                <span class="titleCard">Electronic Arts Inc.</span>
+                <span class="dateYear">24-mar-2023</span>
+              </h2>
+              <h3 class="subTitle">Costruire San Sequoia</h3>
+              <p class="card-text">
+                I progettisti di The Sims 4 Cresciamo Insieme Expansion Pack
+                parlano di ciò che ha ispirato l'espansione incentrata sulla
+                famiglia
+              </p>
+            </div>
+          </div>
+          <div class="card prova provaShadow" style="width: 21rem">
+            <img
+              src="/ultimeNewImg/eaCard5.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h2>
+                <span class="titleCard">Electronic Arts Inc.</span>
+                <span class="dateYear">3-apr-2023</span>
+              </h2>
+              <h3 class="subTitle">Max Verstappen firma con EA SPORTS™</h3>
+              <p class="card-text">
+                Il pluricampione del mondo in carica di Formula 1® sarà presente
+                nei titoli EA SPORTS™.
+              </p>
+            </div>
+          </div>
+          <div class="card prova provaShadow" style="width: 21rem">
+            <img
+              src="/ultimeNewImg/eaCard6.png"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h2>
+                <span class="titleCard">Electronic Arts Inc.</span>
+                <span class="dateYear">31-gen-2023</span>
+              </h2>
+              <h3 class="subTitle">
+                Aggiornamenti di Electronic Arts sulle strategie di Apex Legends
+                Mobile e B…
+              </h3>
+              <p class="card-text">
+                Apex Legends Mobile e Battlefield Mobile chiudono i battenti per
+                concentrarsi su nuove strategie
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container spazioSopra provaScreen fifa1 none" id="n1">
+        <div class="row column-gap-3 justify-content-center">
+          <div class="card prova provaShadow" style="width: 21rem">
+            <img
+              src="/ultimeNewImg/Fifa1&2.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h2>
+                <span class="titleCard">FIFA</span>
+                <span class="dateYear">14-mar-2023</span>
+              </h2>
+              <h3 class="subTitle">
+                FIFA 23 | Note degli sviluppatori - Aggiornamento #9
+              </h3>
+              <p class="card-text">
+                L'aggiornamento #9 di FIFA 23 sarà presto disponibile su
+                PlayStation®5, Xbox Series X|S, PlayStation®4, Xbox One e PC.
+                Include miglioramenti a vari aspetti del gameplay, tra cui
+                movimento dei giocatori, intercettazioni mentre…
+              </p>
+            </div>
+          </div>
+          <div class="card prova provaShadow" style="width: 21rem">
+            <img
+              src="/ultimeNewImg/Fifa1&2.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h2>
+                <span class="titleCard">FIFA</span>
+                <span class="dateYear">6-mar-2023</span>
+              </h2>
+              <h3 class="subTitle">
+                FIFA 23 - Note degli sviluppatori - Un'occhiata da vicino a UWCL
+                e NWSL - E…
+              </h3>
+              <p class="card-text">
+                Siamo lieti di annunciare l'aggiunta della UEFA Women's
+                Champions League (UWCL) e della National Women's Soccer League
+                (NWSL)
+              </p>
+            </div>
+          </div>
+          <div class="card prova provaShadow" style="width: 21rem">
+            <img src="/ultimeNewImg/Fifa3.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h2>
+                <span class="titleCard">FIFA</span>
+                <span class="dateYear">23-feb-2023</span>
+              </h2>
+              <h3 class="subTitle">
+                Le mascotte dei club tornano in Ultimate Team - Sito ufficiale
+                EA SPORTS
+              </h3>
+              <p class="card-text">
+                Le mascotte dei club tornano in Ultime Team
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row column-gap-3 justify-content-center pippo">
+          <div class="card prova provaShadow" style="width: 21rem">
+            <img src="/ultimeNewImg/Fifa4.png" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h2>
+                <span class="titleCard">FIFA</span>
+                <span class="dateYear">8-nov-2022</span>
+              </h2>
+              <h3 class="subTitle">
+                Pronostico EA SPORTS FIFA World Cup 2022™
+              </h3>
+              <p class="card-text">
+                EA SPORTS™ pronostica che sarà l'Argentina a vincere la FIFA
+                World Cup 2022™. Scopri come si è svolto il torneo nella
+                simulazione di FIFA 23.
+              </p>
+            </div>
+          </div>
+          <div class="card prova provaShadow" style="width: 21rem">
+            <img src="/ultimeNewImg/Fifa5.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h2>
+                <span class="titleCard">FIFA</span>
+                <span class="dateYear">1-nov-2022</span>
+              </h2>
+              <h3 class="subTitle">
+                FIFA 23 | Note degli sviluppatori - FIFA World Cup™
+              </h3>
+              <p class="card-text">
+                Abbiamo numerosi dettagli da condividere sulla FIFA World Cup
+                2022™, disponibile a breve in FIFA 23.
+              </p>
+            </div>
+          </div>
+          <div class="card prova provaShadow" style="width: 21rem">
+            <img src="/ultimeNewImg/Fifa6.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h2>
+                <span class="titleCard">FIFA</span>
+                <span class="dateYear">28-ott-2022</span>
+              </h2>
+              <h3 class="subTitle">Show Racism the Red Card</h3>
+              <p class="card-text">
+                28 ottobre 2022 - EA SPORTS™ e Show Racism the Red Card (SRtRC)
+                hanno annunciato che l'opera d'arte vincitrice del concorso
+                scolastico "IT'S IN THE GAME" di quest'anno sarà da oggi parte
+                di FIFA 23.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container spazioSopra provaScreen starWars1 none" id="n1">
+        <div class="row column-gap-3 justify-content-center">
+          <div class="card prova provaShadow" style="width: 21rem">
+            <img src="/ultimeNewImg/St1.png" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h2>
+                <span class="titleCard">Electronic Arts Inc.</span>
+                <span class="dateYear">11-giu-2021</span>
+              </h2>
+              <h3 class="subTitle">
+                Star Wars™ Jedi: Fallen Order | Dettagli versione next-gen
+              </h3>
+              <p class="card-text">
+                Respawn, EA e Lucasfilm Games annunciano l'uscita di Star Wars™
+                Jedi: Fallen Order su console PlayStation®5 e Xbox Series X|S.
+              </p>
+            </div>
+          </div>
+          <div class="card prova provaShadow" style="width: 21rem">
+            <img src="/ultimeNewImg/St2.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h2>
+                <span class="titleCard">Star Wars™: Squadrons</span>
+                <span class="dateYear">6-mag-2021</span>
+              </h2>
+              <h3 class="subTitle">
+                STAR WARS™: Squadrons – Modifiche al bilanciamento – 6 maggio –
+                Sito EA uff…
+              </h3>
+              <p class="card-text">
+                Bilanciamento dei caccia stellari lato server
+              </p>
+            </div>
+          </div>
+          <div class="card prova provaShadow" style="width: 21rem">
+            <img src="/ultimeNewImg/st3.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h2>
+                <span class="titleCard">Star Wars™: Squadrons</span>
+                <span class="dateYear">7-apr-2021</span>
+              </h2>
+              <h3 class="subTitle">
+                STAR WARS™: Squadrons – Modifiche al bilanciamento – 7 aprile –
+                Sito EA uff…
+              </h3>
+              <p class="card-text">
+                Bilanciamento dei caccia stellari lato server
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row column-gap-3 justify-content-center pippo">
+          <div class="card prova provaShadow" style="width: 21rem">
+            <img src="/ultimeNewImg/St4.png" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h2>
+                <span class="titleCard">Star Wars™: Squadrons</span>
+                <span class="dateYear">18-mar-2021</span>
+              </h2>
+              <h3 class="subTitle">
+                Sfreccia tra le stelle in STAR WARS™: Squadrons con EA Play –
+                Sito EA uffic…
+              </h3>
+              <p class="card-text">
+                STAR WARS™: Squadrons è ora disponibile in The Play List.
+              </p>
+            </div>
+          </div>
+          <div class="card prova provaShadow" style="width: 21rem">
+            <img src="/ultimeNewImg/St5.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h2>
+                <span class="titleCard">Star Wars™: Squadrons</span>
+                <span class="dateYear">15-mar-2021</span>
+              </h2>
+              <h3 class="subTitle">
+                STAR WARS™: Squadrons - Modifiche al bilanciamento - 15 marzo –
+                Sito EA uff…
+              </h3>
+              <p class="card-text">
+                Bilanciamento dei caccia stellari lato server
+              </p>
+            </div>
+          </div>
+          <div class="card prova provaShadow" style="width: 21rem">
+            <img src="/ultimeNewImg/St6.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h2>
+                <span class="titleCard">Star Wars™: Squadrons</span>
+                <span class="dateYear">24-feb-2021</span>
+              </h2>
+              <h3 class="subTitle">
+                STAR WARS™: Squadrons - Modifiche al bilanciamento - 24 febbraio
+                – Sito EA …
+              </h3>
+              <p class="card-text">
+                Bilanciamento dei caccia stellari lato server
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container spazioSopra provaScreen theSims1 none" id="n1">
+        <div class="row column-gap-3 justify-content-center">
+          <div class="card prova provaShadow" style="width: 21rem">
+            <img
+              src="/ultimeNewImg/TheSims4-1,2,5,6.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h2>
+                <span class="titleCard">The Sims 4</span>
+                <span class="dateYear">26-apr-2023</span>
+              </h2>
+              <h3 class="subTitle">Aggiornamento: 26/04/2023</h3>
+              <p class="card-text">Puntelliamo i denti smossi!</p>
+            </div>
+          </div>
+          <div class="card prova provaShadow" style="width: 21rem">
+            <img
+              src="/ultimeNewImg/TheSims4-1,2,5,6.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h2>
+                <span class="titleCard">The Sims 4</span>
+                <span class="dateYear">18-apr-2023</span>
+              </h2>
+              <h3 class="subTitle">Aggiornamento: 18/04/2023</h3>
+              <p class="card-text">
+                Lattanti sibilanti che si allungano... Pazzesco!!!
+              </p>
+            </div>
+          </div>
+          <div class="card prova provaShadow" style="width: 21rem">
+            <img
+              src="/ultimeNewImg/TheSims4-3.png"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h2>
+                <span class="titleCard">The Sims 4</span>
+                <span class="dateYear">18-apr-2023</span>
+              </h2>
+              <h3 class="subTitle">
+                Ricoprite le vostre radici con The Sims 4
+              </h3>
+              <p class="card-text">
+                The Sims 4 Oasi Verde Kit e The Sims 4 Tesori Nascosti Kit
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row column-gap-3 justify-content-center pippo">
+          <div class="card prova provaShadow" style="width: 21rem">
+            <img
+              src="/ultimeNewImg/TheSims4-4.png"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h2>
+                <span class="titleCard">The Sims 4</span>
+                <span class="dateYear">11-apr-2023</span>
+              </h2>
+              <h3 class="subTitle">Cose da fare - 11 aprile 2023</h3>
+              <p class="card-text">Cose da fare</p>
+            </div>
+          </div>
+          <div class="card prova provaShadow" style="width: 21rem">
+            <img
+              src="/ultimeNewImg/TheSims4-1,2,5,6.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h2>
+                <span class="titleCard">The Sims 4</span>
+                <span class="dateYear">28-mar-2023</span>
+              </h2>
+              <h3 class="subTitle">Aggiornamento: 28/03/2023</h3>
+              <p class="card-text">
+                Aggiornamento per le console per la parita` tra piattaforme
+              </p>
+            </div>
+          </div>
+          <div class="card prova provaShadow" style="width: 21rem">
+            <img
+              src="/ultimeNewImg/TheSims4-1,2,5,6.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h2>
+                <span class="titleCard">The Sims 4</span>
+                <span class="dateYear">27-mar-2023</span>
+              </h2>
+              <h3 class="subTitle">Aggiornamento: 24/03/2023</h3>
+              <p class="card-text">Perdita della perdita dei denti</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container spazioSopra provaScreen apexLegends1 none" id="n1">
+        <div class="row column-gap-3 justify-content-center">
+          <div class="card prova provaShadow" style="width: 21rem">
+            <img
+              src="/ultimeNewImg/ApexNew1.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h2>
+                <span class="titleCard">Apex Legends</span>
+                <span class="dateYear">19-mag-2023</span>
+              </h2>
+              <h3 class="subTitle">Modifica globale dei prezzi</h3>
+              <p class="card-text">
+                Un aggiornamento sull'imminente modifica globale dei prezzi in
+                Apex Legens
+              </p>
+            </div>
+          </div>
+          <div class="card prova provaShadow" style="width: 21rem">
+            <img
+              src="/ultimeNewImg/ApexNew2.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h2>
+                <span class="titleCard">Apex Legends</span>
+                <span class="dateYear">18-mag-2023</span>
+              </h2>
+              <h3 class="subTitle">
+                Dimostra di essere tu il pericolo più grande nell'evento Massima
+                allerta
+              </h3>
+              <p class="card-text">
+                Gioca una modalità votata dai fan per l'intera durata
+                dell'evento, sblocca nuovi bundle, scopri le novità di Mixtape e
+                altro ancora!
+              </p>
+            </div>
+          </div>
+          <div class="card prova provaShadow" style="width: 21rem">
+            <img
+              src="/ultimeNewImg/ApexNew3.png"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h2>
+                <span class="titleCard">Apex Legends</span>
+                <span class="dateYear">11-mag-2023</span>
+              </h2>
+              <h3 class="subTitle">
+                Playoff Fase 2 - Format, programma e informazioni sulla sede del
+                torneo
+              </h3>
+              <p class="card-text">
+                Tutto quello che c'è da sapere sui playoff della Fase 2.
+                Unisciti a noi dal 13 al 16 luglio 2023 alla Copper Box Arena di
+                Londra!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row column-gap-3 justify-content-center pippo">
+          <div class="card prova provaShadow" style="width: 21rem">
+            <img
+              src="/ultimeNewImg/ApexNew4.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h2>
+                <span class="titleCard">Apex Legends</span>
+                <span class="dateYear">8-mag-2023</span>
+              </h2>
+              <h3 class="subTitle">
+                Apex Legends™ - Arsenale - Note sulla patch
+              </h3>
+              <p class="card-text">
+                Leggi le note sulla patch complete di Arsenale e scopri di più
+                su Ballistic, la maestria armi e le novità del sistema di
+                segnalazione.
+              </p>
+            </div>
+          </div>
+          <div class="card prova provaShadow" style="width: 21rem">
+            <img
+              src="/ultimeNewImg/ApexNew5.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h2>
+                <span class="titleCard">Apex Legends</span>
+                <span class="dateYear">5-mag-2023</span>
+              </h2>
+              <h3 class="subTitle">
+                Voto della community sulla modalità a tempo limitato di Arsenale
+              </h3>
+              <p class="card-text">
+                Dicci quale modalità dovrebbe avere una playlist dedicata nel
+                nostro imminente evento di gioco!
+              </p>
+            </div>
+          </div>
+          <div class="card prova provaShadow" style="width: 21rem">
+            <img src="/ultimeNewImg/Apex1.png" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h2>
+                <span class="titleCard">Apex Legends</span>
+                <span class="dateYear">2-mag-2023</span>
+              </h2>
+              <h3 class="subTitle">
+                Apex Legends™ - Arsenale: aggiornamento della modalità
+                Classificata
+              </h3>
+              <p class="card-text">
+                Scopri come funziona la modalità Classificata di Apex Legends e
+                quali modifiche abbiamo introdotto di recente per migliorare i
+                sistemi di matchmaking e partita Classificata.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container spazioSopra provaScreen f1Show none" id="n1">
+        <div class="row column-gap-3 justify-content-center">
+          <div class="card prova provaShadow" style="width: 21rem">
+            <img src="/ultimeNewImg/F1-1.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h2>
+                <span class="titleCard">F1® 22</span>
+                <span class="dateYear">22-feb-2023</span>
+              </h2>
+              <h3 class="subTitle">F1® 22 - Note sulla patch 1.18</h3>
+              <p class="card-text">
+                La patch 1.18 comprende la vettura C43 dell'Alfa Romeo F1 Team
+                del 2023, utilizzabile in modalità Prova a tempo
+              </p>
+            </div>
+          </div>
+          <div class="card prova provaShadow" style="width: 21rem">
+            <img src="/ultimeNewImg/F1-2.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h2>
+                <span class="titleCard">F1® 22</span>
+                <span class="dateYear">22-feb-2023</span>
+              </h2>
+              <h3 class="subTitle">
+                Livrea Alfa Romeo C43 2023 aggiunta a F1® 22
+              </h3>
+              <p class="card-text">
+                Inizia la nuova stagione di F1® con Alfa Romeo e F1® 22
+              </p>
+            </div>
+          </div>
+          <div class="card prova provaShadow" style="width: 21rem">
+            <img
+              src="/ultimeNewImg/eaCard5.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h2>
+                <span class="titleCard">Electronic Arts Inc.</span>
+                <span class="dateYear">3-feb-2023</span>
+              </h2>
+              <h3 class="subTitle">Max Verstappen firma con EA SPORTS™</h3>
+              <p class="card-text">
+                Il pluricampione del mondo in carica di Formula 1® sarà presente
+                nei titoli EA SPORTS™.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row column-gap-3 justify-content-center pippo">
+          <div class="card prova provaShadow" style="width: 21rem">
+            <img src="/ultimeNewImg/F1-4.png" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h2>
+                <span class="titleCard">F1® 22</span>
+                <span class="dateYear">18-gen-2023</span>
+              </h2>
+              <h3 class="subTitle">
+                Inizia il nuovo anno con il Pass Podio Serie 5
+              </h3>
+              <p class="card-text">
+                Festeggia il Capodanno lunare con degli oggetti davvero potenti
+              </p>
+            </div>
+          </div>
+          <div class="card prova provaShadow" style="width: 21rem">
+            <img src="/ultimeNewImg/F1-5.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h2>
+                <span class="titleCard">F1® 22</span>
+                <span class="dateYear">16-gen-2023</span>
+              </h2>
+              <h3 class="subTitle">F1® 22 - Note sulla patch 1.17</h3>
+              <p class="card-text">
+                La patch 1.17 include il supporto a AMD FidelityFX Super
+                Resolution 2.2
+              </p>
+            </div>
+          </div>
+          <div class="card prova provaShadow" style="width: 21rem">
+            <img src="/ultimeNewImg/F1-6.png" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h2>
+                <span class="titleCard">F1® 22</span>
+                <span class="dateYear">7-dic-2022</span>
+              </h2>
+              <h3 class="subTitle">
+                La serie 4 del Pass Podio accoglie Audi in F1®
+              </h3>
+              <p class="card-text">
+                Inoltre, per tutta la durata delle vacanze, si svolgerà un
+                evento speciale a tempo limitato
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container spazioSopra provaScreen battlefield1 none" id="n1">
+        <div class="row column-gap-3 justify-content-center">
+          <div class="card prova provaShadow" style="width: 21rem">
+            <img
+              src="/ultimeNewImg/BattlefieldNew1.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h2>
+                <span class="titleCard">Battlefield 2042</span>
+                <span class="dateYear">17-mag-2023</span>
+              </h2>
+              <h3 class="subTitle">
+                Note di sviluppo - Miglioramento di Dozer e Irish
+              </h3>
+              <p class="card-text">
+                Date un'occhiata alle nostre ultime anticipazioni sulla Stagione
+                5 di Battlefield 2042, con dettagli su Irish e Dozer.
+              </p>
+            </div>
+          </div>
+          <div class="card prova provaShadow" style="width: 21rem">
+            <img
+              src="/ultimeNewImg/BattlefieldNew2.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h2>
+                <span class="titleCard">Battlefield 2042</span>
+                <span class="dateYear">10-mag-2023</span>
+              </h2>
+              <h3 class="subTitle">
+                Note di sviluppo - Gestione della squadra, ordini di squadra
+              </h3>
+              <p class="card-text">
+                Gestione della squadra, ordini di squadra, Stagione 5
+              </p>
+            </div>
+          </div>
+          <div class="card prova provaShadow" style="width: 21rem">
+            <img
+              src="/ultimeNewImg/BattlefieldNew3.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h2>
+                <span class="titleCard">Battlefield 2042</span>
+                <span class="dateYear">5-mag-2023</span>
+              </h2>
+              <h3 class="subTitle">AGGIORNAMENTO 4.2.1 DI BATTLEFIELD 2042</h3>
+              <p class="card-text">
+                Miglioramenti al gameplay in coda all'aggiornamento 4.2
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row column-gap-3 justify-content-center pippo">
+          <div class="card prova provaShadow" style="width: 21rem">
+            <img
+              src="/ultimeNewImg/BattlefieldNew4.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h2>
+                <span class="titleCard">Battlefield 2042</span>
+                <span class="dateYear">3-mag-2023</span>
+              </h2>
+              <h3 class="subTitle">
+                Note di sviluppo - Evoluzione delle armi The Vault
+              </h3>
+              <p class="card-text">
+                Complementi, personalizzazione e bilanciamento per le armi The
+                Vault in arrivo nella Stagione 5.
+              </p>
+            </div>
+          </div>
+          <div class="card prova provaShadow" style="width: 21rem">
+            <img
+              src="/ultimeNewImg/Battlefield1.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h2>
+                <span class="titleCard">Battlefield 2042</span>
+                <span class="dateYear">21-apr-2023</span>
+              </h2>
+              <h3 class="subTitle">AGGIORNAMENTO 4.2.0 DI BATTLEFIELD 2042</h3>
+              <p class="card-text">
+                La penultima mappa revisionata di Battlefield 2042 e ulteriori
+                miglioramenti all'esperienza di gioco con l'aggiornamento 4.2
+              </p>
+            </div>
+          </div>
+          <div class="card prova provaShadow" style="width: 21rem">
+            <img
+              src="/ultimeNewImg/Battlefield2.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h2>
+                <span class="titleCard">Battlefield 2042</span>
+                <span class="dateYear">20-apr-2023</span>
+              </h2>
+              <h3 class="subTitle">
+                Note degli sviluppatori - Sistema di mira uniforme
+              </h3>
+              <p class="card-text">
+                Aggiornamento 4.2, sistema di mira uniforme
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- container fine -->
+    </div>
+    <!-- Fine Ultime Uscite Gabriele -->
+
+    <!-- Footer Lorenzo -->
+    <div id="FooterLorenzo" , class="footerlorenzo">
+      <div class="contentJoin">
+        <div class="imgContainer">
+          <img
+            class="img-fluid"
+            src="/Project-Team4-EA/Media/hero-medium-console-7x2-xl.jpg.adapt.crop5x2.1455w.jpg"
+            alt=""
+          />
+        </div>
+        <div class="container item1">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="240"
+            height="101"
+            viewBox="0 0 240 101"
+          >
+            <path
+              fill="#FF4747"
+              fill-rule="evenodd"
+              d="M94.84828,8.76968 L94.84828,61.49768 L105.24348,61.49768 L105.24348,42.28928 L118.04948,42.28928 C128.36828,42.28928 136.05148,35.13448 136.05148,25.41728 C136.05148,15.77488 128.66948,8.76968 118.42588,8.76968 L94.84828,8.76968 Z M117.29668,33.40208 L105.24348,33.40208 L105.24348,18.03528 L117.29668,18.03528 C122.26748,18.03528 125.73268,21.19888 125.73268,25.71888 C125.73268,30.23808 122.26748,33.40208 117.29668,33.40208 L117.29668,33.40208 Z M150.51348,5.75768 L140.94788,8.76968 L140.94788,61.49768 L150.51348,61.49768 L150.51348,5.75768 Z M173.78788,62.02568 C178.45908,62.02568 182.67748,60.29328 185.84108,57.35448 L185.84108,61.49768 L195.40668,61.49768 L195.40668,23.91128 L185.84108,23.91128 L185.84108,28.05288 C182.82748,25.04048 178.68388,23.30808 174.16588,23.30808 C164.37388,23.30808 155.48428,31.44288 155.48428,42.66608 C155.48428,53.88928 164.22228,62.02568 173.78788,62.02568 L173.78788,62.02568 Z M175.44588,53.43768 C169.64668,53.43768 164.97508,48.99328 164.97508,42.66608 C164.97508,36.33888 169.64668,31.89448 175.44588,31.89448 C181.32108,31.89448 185.91588,36.33888 185.91588,42.66608 C185.91588,48.99328 181.32108,53.43768 175.44588,53.43768 L175.44588,53.43768 Z M239.99988,23.91128 L229.98148,23.91128 L219.28428,46.05608 L208.36268,23.91128 L197.66708,23.91128 L213.78668,56.75168 L203.01508,78.14528 L213.41028,78.14528 L239.99988,23.91128 Z M54.90148,45.86888 L51.83028,40.96608 L42.86348,40.96608 L45.93948,36.05448 L48.77228,36.05448 L45.34828,30.58728 L35.79628,45.86888 L10.31268,45.86888 L16.44828,36.05448 L11.94308,36.05448 L15.00588,31.14328 L34.70428,31.14328 L31.63988,36.05448 L22.24468,36.05448 L19.17348,40.96608 L33.07148,40.96608 L45.34828,21.31808 L60.69108,45.86888 L54.90148,45.86888 Z M21.14388,21.31808 L41.34988,21.31808 L38.27868,26.23168 L18.07468,26.23168 L21.14388,21.31808 Z M35.14788,8e-05 C15.73708,8e-05 -0.00012,15.73808 -0.00012,35.15008 C-0.00012,54.56648 15.73708,70.29768 35.14788,70.29768 C54.55828,70.29768 70.29788,54.56648 70.29788,35.15008 C70.29788,15.73808 54.55828,8e-05 35.14788,8e-05 L35.14788,8e-05 Z"
+            />
+          </svg>
+          <button class="JoinNow">Iscriviti Subito</button>
+          <h6>
+            Non limitarti al gioco. Gioca al massimo. Sblocca ricompense
+            esclusive, contenuti per i soli membri e una libreria dei migliori
+            titoli.
+          </h6>
+        </div>
       </div>
       <div class="findmore">
         <h2>
           Giocatori e genitori: il controllo dei videogiochi è nelle vostre mani
         </h2>
         <button class="findmorebtn">Scopri di Più</button>
-   
       </div>
       <div class="enterprise">
         <div class="localinks">
@@ -543,15 +1470,18 @@
     <!-- Fine Footer Lorenzo-->
   </body>
 
-
   <!-- jQuery e plugin JavaScript  -->
-  <script src="ultimeNew.js"></script> 
-    <!-- <script src="//code.jquery.com/jquery.js"></script> -->
+  <script src="ultimeNew.js"></script>
+  <!-- <script src="//code.jquery.com/jquery.js"></script> -->
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
     crossorigin="anonymous"
+
    ></script>
 <script src="header.js"></script>
+
+
+  ></script>
 
 </html>
