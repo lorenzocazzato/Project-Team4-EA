@@ -5,9 +5,29 @@
   right: 0;
   left: 0;
   width: 100%;
-  z-index: 1030;
 }
-
+.offcanvas.hiding, .offcanvas.show, .offcanvas.showing{
+  transition: transform .5s cubic-bezier(.5,.25,.015,1);
+}
+.darkColor{
+  background-color: #161616;
+  z-index: 2000;
+}
+.divTextNav{
+  cursor: pointer;
+}
+.margin0padding0{
+  margin: 0;
+  padding: 0;
+}
+.height40px{
+  height: 40px;
+  width: auto;
+}
+.logoSvg{
+  height: 24px;
+  width: 24px;
+}
 /* comportamento navbar autohide */
 .scrolled-down {
   transform: translateY(-40px);
@@ -23,6 +43,8 @@
 .btn{
   height: 100%;
   width: 100%;
+  --bs-btn-border-width: transparent; 
+  
 }
 .btn > .bottone3punti{
   pointer-events: none;
@@ -81,6 +103,8 @@ a{
   position: absolute;
   display: block;
   top: 50%;
+  transition: 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+
 }
 #pseudo::before{
   transform: rotate(45deg);
@@ -97,25 +121,6 @@ a{
   transform: rotate(45deg);
 }
 
-.darkColor{
-  background-color: #161616;
-}
-.divTextNav{
-  cursor: pointer;
-}
-.margin0padding0{
-  margin: 0;
-  padding: 0;
-}
-.height40px{
-  height: 40px;
-  width: auto;
-}
-.logoSvg{
-  height: 24px;
-  width: 24px;
-}
-
 @media all and (min-width: 992px) {
 	.navbar .dropdown-menu-end{ right:0; left: auto;  }
 	.navbar .nav-item .dropdown-menu{  display:block; opacity: 0;  visibility: hidden; transition:.3s; margin-top:0;  }
@@ -126,7 +131,24 @@ a{
 }
 /*componenti sidebar */
 .offcanvas-header{
-  margin-top: 50px;
+  margin-top: 97px;
+  margin-bottom: 47px;
+  height: 27px;
+}
+.offcanvas-title{
+  color: #a3a3a3;
+  font-weight: 700;
+  font-family: "Verdana", "Helvetica", "Arial", sans-serif;
+}
+.offcanvas-title:hover {
+  color: #f50c0c;
+}
+.offcanvas-header #closeSideBar:hover {
+  color: #f50c0c;
+}
+#closeSideBar{
+  --bs-btn-close-focus-shadow: 0 0 0 0 0;
+  font-size: small;
 }
 .offcanvas{
   bottom: -100vh;
