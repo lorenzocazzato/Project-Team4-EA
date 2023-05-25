@@ -131,7 +131,23 @@ a{
 }
 /*componenti sidebar */
 .offcanvas-header{
-  margin-top: 50px;
+  margin-top: 97px;
+  margin-bottom: 47px;
+  height: 27px;
+}
+.offcanvas-title{
+  color: #a3a3a3;
+  font-weight: 700;
+  font-family: "Verdana", "Helvetica", "Arial", sans-serif;
+}
+.offcanvas-title:hover {
+  color: #f50c0c;
+}
+.offcanvas-header #closeSideBar:hover {
+  color: #f50c0c;
+}
+#closeSideBar{
+  --bs-btn-close-focus-shadow: 0 0 0 0 0
 }
 .offcanvas{
   bottom: -100vh;
