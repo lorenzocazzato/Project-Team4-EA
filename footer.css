@@ -1,119 +1,120 @@
 * {
-  padding: 0;
-  margin: 0;
-}
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
 
-.footerlorenzo {
-  text-decoration: none;
-}
-
-.contentJoin {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  min-height: 600px;
-  justify-content: center;
-  left: 0;
-  text-align: center;
-  top: 0;
-  width: 100%;
-  background-image: url();
-}
-
-.imgContainer {
-  position: relative;
-}
-
-.item1 {
-  position: absolute;
-}
-
-.findmore {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  background-color: rgb(0, 152, 237, 1);
-}
-
-.enterprise {
-  display: flex;
-  flex-direction: column;
-  padding: 12px 60px 40px;
-  background: #eaeaea;
-}
-
-.localinks {
-  display: flex;
-  flex-flow: row;
-  margin-bottom: 9px;
-  padding: 0;
-  justify-content: space-between;
-}
-
-.utilities {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.links {
-  display: flex;
-  flex-direction: row;
-  gap: 2px;
-}
-
-.footer2 {
-  display: flex;
-  flex-direction: column;
-  padding: 12px 60px 40px;
-}
-
-.footerlogo {
-  margin-bottom: 9px;
-  max-width: 47px;
-}
-
-.legal {
-  display: flex;
-  flex-direction: row;
-  padding: 12px 60px 40px;
-  gap: 20px;
-}
-
-.copyright {
-  display: flex;
-  flex-direction: column;
-  padding: 12px 60px 40px;
-}
-
-.prezziregione {
-  height: 20px;
-  width: 40px;
-  display: flex;
-  box-sizing: border-box;
-  border-radius: 3px;
-  border-style: solid;
-  border-width: 2px;
-  bottom: 0;
-  content: "";
-  left: 0;
-  right: 0;
-  top: 0;
-  transition: border-width 0.1s, bottom 0.1s, left 0.1s, right 0.1s, top 0.1s;
-}
-
-.prezzilingua {
-  gap: 41px;
-  grid-auto-flow: column;
-  margin-bottom: 0;
-}
-
-.legal {
-  width: 600px;
-  display: flex;
-  flex-direction: row;
-  font-size: 14px;
-  line-height: 20px;
-  flex-wrap: wrap;
-}
+    padding: 0;
+    margin: 0;
+  }
+  @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+  
+  .footerlorenzo {
+    text-decoration: none;
+  }
+  
+  .contentJoin {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 600px;
+    justify-content: center;
+    left: 0;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    background-image: url();
+  }
+  
+  .imgContainer {
+    position: relative;
+  }
+  
+  .item1 {
+    position: absolute;
+  }
+  
+  .findmore {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(0, 152, 237, 1);
+  }
+  
+  .enterprise {
+    display: flex;
+    flex-direction: column;
+    padding: 12px 60px 40px;
+    background: #eaeaea;
+  }
+  
+  .localinks {
+    display: flex;
+    flex-flow: row;
+    margin-bottom: 9px;
+    padding: 0;
+    justify-content: space-between;
+  }
+  
+  .utilities {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .links {
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+  }
+  
+  .footer2 {
+    display: flex;
+    flex-direction: column;
+    padding: 12px 60px 40px;
+  }
+  
+  .footerlogo {
+    margin-bottom: 9px;
+    max-width: 47px;
+  }
+  
+  .legal {
+    display: flex;
+    flex-direction: row;
+    padding: 12px 60px 40px;
+    gap: 20px;
+  }
+  
+  .copyright {
+    display: flex;
+    flex-direction: column;
+    padding: 12px 60px 40px;
+  }
+  
+  .prezziregione {
+    height: 20px;
+    width: 40px;
+    display: flex;
+    box-sizing: border-box;
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 2px;
+    bottom: 0;
+    content: "";
+    left: 0;
+    right: 0;
+    top: 0;
+    transition: border-width 0.1s, bottom 0.1s, left 0.1s, right 0.1s, top 0.1s;
+  }
+  
+  .prezzilingua {
+    gap: 41px;
+    grid-auto-flow: column;
+    margin-bottom: 0;
+  }
+  
+  .legal {
+    width: 600px;
+    display: flex;
+    flex-direction: row;
+    font-size: 14px;
+    line-height: 20px;
+    flex-wrap: wrap;
+  }
