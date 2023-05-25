@@ -14,42 +14,10 @@
   </head>
   <body>
     <!-- Header Matteo -->
-    <!-- comportamento navbar nera con logo utente -->
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        el_autohide = document.querySelector(".autohide");
-        // let navBainca = document.querySelector(".navBianca")
-        // add padding-top to bady (if necessary)
-        navbar_height = document.querySelector(".navbar").offsetHeight;
-        document.body.style.paddingTop = navbar_height + "px";
-        
-        if (el_autohide) {
-          var last_scroll_top = 0;
-          window.addEventListener("scroll", function () {
-            let scroll_top = window.scrollY;
-            if (scroll_top < last_scroll_top) {
-              el_autohide.classList.remove("scrolled-down");
-              el_autohide.classList.add("scrolled-up");
-              // navBainca.add("scrolled-down2");
-              // navBainca.classList.remove("scrolled-up2");
-            } else {
-              el_autohide.classList.remove("scrolled-up");
-              el_autohide.classList.add("scrolled-down");
-              // navBainca.classList.add("scrolled-up2");
-              // navBainca.classList.remove("scrolled-down2");
-            }
-            last_scroll_top = scroll_top;
-          });
-          // window.addEventListener
-        }
-        // if
-      });
-    </script>
-    <!-- fine comportamento barra nera -->
     <!--navbar nera con logo utente -->
-<nav class="autohide">
+<nav class="autohide" id="darkColor">
     <nav
-      class=" navbar height40px sticky-top darkColor justify-content-end"
+      class=" navbar height40px darkColor justify-content-end" 
     >
       <div class="container-fluid logoSvg margin0padding0">
         <svg class="logoSvg" style="fill: #f3f3f3">
@@ -68,7 +36,7 @@
         </svg>
       </div>
     </nav>
-    <!-- navbar bianca: bottesidebar + menù -->
+    <!-- navbar bianca: buttonSidebar + menù -->
     <nav
       class="navbar bg-body-tertiary navBianca sticky-xxl-top"
       style="
@@ -87,6 +55,7 @@
           data-bs-toggle="offcanvas"
           data-bs-target="#offcanvasExample"
           aria-controls="offcanvasExample"
+          id="sideBarButton"
         >
           <svg class="bottone3punti"
             viewBox="0 0 16 16"
@@ -124,6 +93,7 @@
               class="btn-close"
               data-bs-dismiss="offcanvas"
               aria-label="Close"
+              id="closeSideBar"
             ></button>
           </div>
           <div class="offcanvas-body">
@@ -289,6 +259,39 @@
         alt=""
       />
     </div>
+    <ul>
+      <li>mi serve lo scroll</li>
+      <li>mi serve lo scroll</li>
+      <li>mi serve lo scroll</li>
+      <li>mi serve lo scroll</li>
+      <li>mi serve lo scroll</li>
+      <li>mi serve lo scroll</li>
+      <li>mi serve lo scroll</li>
+      <li>mi serve lo scroll</li>
+      <li>mi serve lo scroll</li>
+      <li>mi serve lo scroll</li>
+      <li>mi serve lo scroll</li>
+      <li>mi serve lo scroll</li>
+      <li>mi serve lo scroll</li>
+      <li>mi serve lo scroll</li>
+      <li>mi serve lo scroll</li>
+      <li>mi serve lo scroll</li>
+      <li>mi serve lo scroll</li>
+      <li>mi serve lo scroll</li>
+      <li>mi serve lo scroll</li>
+      <li>mi serve lo scroll</li>
+      <li>mi serve lo scroll</li>
+      <li>mi serve lo scroll</li>
+      <li>mi serve lo scroll</li>
+      <li>mi serve lo scroll</li>
+      <li>mi serve lo scroll</li>
+      <li>mi serve lo scroll</li>
+      <li>mi serve lo scroll</li>
+      <li>mi serve lo scroll</li>
+      <li>mi serve lo scroll</li>
+
+
+    </ul>
     <!-- Fine Header Matteo -->
 
     <!-- Giochi in Evidenza Stefano -->
@@ -578,6 +581,7 @@
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
     crossorigin="anonymous"
-  ></script>
+   ></script>
+<script src="header.js"></script>
 
 </html>
