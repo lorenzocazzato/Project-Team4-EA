@@ -5,6 +5,7 @@
   right: 0;
   left: 0;
   width: 100%;
+  z-index: 1030;
 }
 .offcanvas.hiding, .offcanvas.show, .offcanvas.showing{
   transition: transform .5s cubic-bezier(.5,.25,.015,1);
