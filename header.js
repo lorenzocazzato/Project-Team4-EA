@@ -1,13 +1,18 @@
 const but = document.getElementById("sideBarButton");
 const darkNavbar = document.getElementById("darkColor");
 const closeSide = document.getElementById("closeSideBar");
+// const body = document.querySelector(".offcanvas-backdrop.show");
 
 if(but.click = true){
     but.addEventListener("click", ()=> darkNavbar.classList.add("scrolled-up"))
 } 
 if (closeSide.click = true) {
-    closeSide.addEventListener("click", ()=> darkNavbar.classList.remove("scrolled-up"))
+  closeSide.addEventListener("click", ()=> darkNavbar.classList.remove("scrolled-up"))
 }
+// if (body.click = true) {
+//   body.addEventListener("click", ()=> darkNavbar.classList.remove("scrolled-up"))
+// }
+
 
 
 // comportamento navbar nera con logo utente 
