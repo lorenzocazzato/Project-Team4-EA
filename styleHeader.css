@@ -144,12 +144,15 @@ a{
 .offcanvas-title:hover {
   color: #f50c0c;
 }
-.offcanvas-header #closeSideBar:hover {
-  color: #f50c0c;
+.sidebarBtnSVG:hover {
+  fill: #f50c0c;
 }
 #closeSideBar{
   --bs-btn-close-focus-shadow: 0 0 0 0 0;
   font-size: small;
+  --bs-btn-close-bg: none;
+  --bs-btn-close-color: #161616;
+  --bs-btn-close-opacity: 1;
 }
 .offcanvas{
   bottom: -100vh;
