@@ -161,4 +161,8 @@ a{
 .imgHeader{
   margin-top: 55px;
 }
+.imgBanner{
+max-height: 112px;
+overflow: hidden;
+}
 
