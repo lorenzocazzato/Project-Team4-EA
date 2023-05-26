@@ -1,7 +1,8 @@
 const but = document.getElementById("sideBarButton");
 const darkNavbar = document.getElementById("darkColor");
 const closeSide = document.getElementById("closeSideBar");
-// const body = document.querySelector(".offcanvas-backdrop.show");
+// const body = document.querySelector("#offcanvasExample > div.offcanvas-backdrop.fade.show");
+// console.log(body)
 
 if(but.click = true){
     but.addEventListener("click", ()=> darkNavbar.classList.add("scrolled-up"))
