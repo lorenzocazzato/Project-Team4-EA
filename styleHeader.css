@@ -30,6 +30,9 @@
   height: 24px;
   width: 24px;
 }
+.colorSvg{
+  fill: #f3f3f3;
+}
 .logoUtente{
   padding: 4px 0px 0px 5px;
   margin-right: 28px;
