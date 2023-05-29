@@ -13,6 +13,7 @@
 .darkColor{
   background-color: #161616;
   z-index: 2000;
+  padding: 0px 28px 0 0;
 }
 .divTextNav{
   cursor: pointer;
@@ -28,6 +29,20 @@
 .logoSvg{
   height: 24px;
   width: 24px;
+}
+.logoUtente{
+  padding: 4px 0px 0px 5px;
+  margin-right: 28px;
+}
+.domande{
+  padding: 4px 0px 0px 5px;
+  margin-right: 13px;
+  margin-left: 12px;
+}
+.ea{
+  margin-left: 20px;
+  height: 40px;
+  width: 40px;
 }
 /* comportamento navbar autohide */
 .scrolled-down {
