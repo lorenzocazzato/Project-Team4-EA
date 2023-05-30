@@ -13,6 +13,7 @@
 .darkColor{
   background-color: #161616;
   z-index: 2000;
+  padding: 0px 28px 0 0;
 }
 .divTextNav{
   cursor: pointer;
@@ -28,6 +29,23 @@
 .logoSvg{
   height: 24px;
   width: 24px;
+}
+.colorSvg{
+  fill: #f3f3f3;
+}
+.logoUtente{
+  padding: 4px 0px 0px 5px;
+  margin-right: 28px;
+}
+.domande{
+  padding: 4px 0px 0px 5px;
+  margin-right: 13px;
+  margin-left: 12px;
+}
+.ea{
+  margin-left: 20px;
+  height: 40px;
+  width: 40px;
 }
 /* comportamento navbar autohide */
 .scrolled-down {
@@ -132,9 +150,10 @@ a{
 }
 /*componenti sidebar */
 .offcanvas-header{
-  margin-top: 97px;
+  margin-top: 82px;
   margin-bottom: 47px;
   height: 27px;
+  padding-left: 0px;
 }
 .offcanvas-title{
   color: #a3a3a3;
@@ -156,6 +175,26 @@ a{
 }
 .offcanvas{
   bottom: -100vh;
+  padding-left: 32px;
+  padding-right: 32px;
+  right: -17px;
+}
+.scroll{
+  overflow-y: scroll;
+}
+.imgGrandeSide{
+  margin-bottom:32px ;
+  position: relative;
+}
+.sideBody{
+  position: relative;
+}
+.over{
+  max-height: 6.5%;
+  filter: drop-shadow(8px 7px 23px #000);
+  top: 28%;
+  left: 40%;
+  cursor: pointer;
 }
 /* imagini header */
 .imgHeader{
