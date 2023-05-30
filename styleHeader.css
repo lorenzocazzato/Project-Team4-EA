@@ -14,6 +14,20 @@
       format("svg");
 }
 /* componenti barra nera  */
+.offcanvas.offcanvas-top{
+  height: 440px;
+  max-height: 440px;
+  background-color: #161616;
+  width: 100%;
+}
+.btn-close{
+  --bs-btn-close-bg: none;
+  fill: #f3f3f3;
+}
+.offheaderblack{
+  justify-content: end;
+}
+
 .autohide {
   position: fixed;
   top: 0;
@@ -44,6 +58,7 @@
 .logoSvg{
   height: 24px;
   width: 24px;
+  cursor: pointer;
 }
 .colorSvg{
   fill: #f3f3f3;

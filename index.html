@@ -22,8 +22,13 @@
     <!--navbar nera con logo utente -->
     <nav class="autohide" id="darkColor">
       <nav class="navbar height40px darkColor justify-content-end">
-        <div class="container-fluid logoSvg logoUtente margin0padding0">
-          <svg class="logoSvg colorSvg">
+        <div
+          class="container-fluid logoSvg logoUtente margin0padding0"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasTop"
+          aria-controls="offcanvasTop"
+        >
+          <svg class="logoSvg colorSvg" id="logoUtente">
             <path
               d="M7.5,9A4.5,4.5,0,1,0,3,4.5,4.5,4.5,0,0,0,7.5,
           9Zm0-7A2.5,2.5,0,1,1,5,4.5,2.5,2.5,0,0,1,7.5,2Z"
@@ -57,6 +62,38 @@
           </svg>
         </a>
       </nav>
+      <!-- offcanvas top nera per logo utente -->
+      <div
+        class="offcanvas offcanvas-top"
+        tabindex="-1"
+        id="offcanvasTop"
+        aria-labelledby="offcanvasTopLabel"
+      >
+        <div class="offcanvas-header offheaderblack ">
+          <button
+            type="button"
+            class="btn-close bodynavclose"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+            style="height: 16px; width: 16px"
+          >   
+          <svg
+          x="0px"
+          y="0px"
+          viewBox="0 0 16 16"
+          style="enable-background: new 0 0 16 16"
+        >
+          <path
+            d="M13.4,11.9l-4-4l3.9-3.9c0.6-0.6,0.7-1.3,0.3-1.7c-0.4-0.4-1.2-0.3-1.7,
+    0.3L8,6.6l-4-4 C3.5,2.1,2.7,1.9,2.3,2.3C1.9,2.7,2.1,3.5,2.6,4.1l4,
+    4l-3.9,3.9c-0.6,0.6-0.7,1.3-0.3,1.7c0.4,0.4,1.2,0.3,1.7-0.3L8,9.4l4,
+    4 c0.6,0.6,1.3,0.7,1.7,0.3C14.1,13.3,13.9,12.5,13.4,11.9z"
+          ></path>
+        </svg></button>
+        </div>
+        <div class="offcanvas-body">...</div>
+      </div>
+
       <!-- navbar bianca: buttonSidebar + menù -->
       <nav
         class="navbar bg-body-tertiary navBianca sticky-xxl-top"
