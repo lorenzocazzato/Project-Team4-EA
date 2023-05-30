@@ -179,6 +179,11 @@ a{
   padding-right: 32px;
   right: -17px;
 }
+.offcanvasMod{
+  &::-webkit-scrollbar {
+  width: 0px;
+}
+}
 .scroll{
   overflow-y: scroll;
 }
@@ -190,11 +195,15 @@ a{
   position: relative;
 }
 .over{
-  max-height: 6.5%;
+  max-height: 19.5%;
   filter: drop-shadow(8px 7px 23px #000);
-  top: 28%;
-  left: 40%;
+  top: 41%;
+  left: 38%;
   cursor: pointer;
+  transition: 0.3s;
+}
+.imgGrandeSide:hover .over{
+  transform: scale(1.1);
 }
 /* imagini header */
 .imgHeader{
