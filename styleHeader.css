@@ -1,4 +1,78 @@
+/* font dei testi */
+ @font-face {
+  font-family: "Electronic Arts Text";
+  src: url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.eot");
+  src: url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.svg#Electronic Arts Text")
+      format("svg");
+}
 /* componenti barra nera  */
+.offcanvas.offcanvas-top{
+  height: 440px;
+  max-height: 440px;
+  background-color: #161616;
+  width: 100%;
+}
+.headerDomande{
+justify-content: center;
+align-items: baseline;
+position: relative;
+}
+.domandeClose{
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+
+}
+#closeSideBar{
+  --bs-btn-close-bg: none;
+  fill:#161616
+}
+.bodynavclose{
+  --bs-btn-close-bg: none;
+  fill: #f3f3f3;
+  --bs-btn-close-focus-shadow: none;
+}
+.accediCrea{
+  font-family:inherit;
+  padding: 0.5em 0 0 0;
+  text-align: center;
+  color:#f3f3f3
+}
+.imgAccedi{
+  max-width: 36px;
+  min-width: 36px;
+  width: 36px;
+}
+.accediCreaAccount{
+  width: calc(19% - 24px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s ease-in-out;
+}
+.accediCreaAccount:hover{
+  transform: translateY(-5px);
+}
+
+
+.offheaderblack{
+  justify-content: end;
+}
+.body2offtop{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
 .autohide {
   position: fixed;
   top: 0;
@@ -29,6 +103,7 @@
 .logoSvg{
   height: 24px;
   width: 24px;
+  cursor: pointer;
 }
 .colorSvg{
   fill: #f3f3f3;
@@ -135,9 +210,17 @@ a{
 }
 .divTextNav:hover #pseudo::before{
   transform: rotate(-45deg);
+  border-color: #f50c0c;
 }
 .divTextNav:hover #pseudo::after{
   transform: rotate(45deg);
+  border-color: #f50c0c;
+}
+.divTextNav:hover{
+  color: #f50c0c;
+}
+.redHover:hover{
+  color: #f50c0c;
 }
 
 @media all and (min-width: 992px) {
@@ -158,7 +241,6 @@ a{
 .offcanvas-title{
   color: #a3a3a3;
   font-weight: 700;
-  font-family: "Verdana", "Helvetica", "Arial", sans-serif;
 }
 .offcanvas-title:hover {
   color: #f50c0c;
@@ -179,22 +261,36 @@ a{
   padding-right: 32px;
   right: -17px;
 }
+.offcanvasMod{
+  &::-webkit-scrollbar {
+  width: 0px;
+}
+}
 .scroll{
   overflow-y: scroll;
 }
 .imgGrandeSide{
   margin-bottom:32px ;
+}
+.relative{
   position: relative;
 }
 .sideBody{
   position: relative;
 }
 .over{
-  max-height: 6.5%;
+  max-height: 19.5%;
   filter: drop-shadow(8px 7px 23px #000);
-  top: 28%;
-  left: 40%;
+  top: 41%;
+  left: 38%;
   cursor: pointer;
+  transition: 0.3s;
+}
+.overBattleSims{
+  left: 23%;
+}
+.relative:hover .over{
+  transform: scale(1.1);
 }
 /* imagini header */
 .imgHeader{

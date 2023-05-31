@@ -22,8 +22,13 @@
     <!--navbar nera con logo utente -->
     <nav class="autohide" id="darkColor">
       <nav class="navbar height40px darkColor justify-content-end">
-        <div class="container-fluid logoSvg logoUtente margin0padding0">
-          <svg class="logoSvg colorSvg">
+        <div
+          class="container-fluid logoSvg logoUtente margin0padding0"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasTop"
+          aria-controls="offcanvasTop"
+        >
+          <svg class="logoSvg colorSvg" id="logoUtente">
             <path
               d="M7.5,9A4.5,4.5,0,1,0,3,4.5,4.5,4.5,0,0,0,7.5,
           9Zm0-7A2.5,2.5,0,1,1,5,4.5,2.5,2.5,0,0,1,7.5,2Z"
@@ -36,7 +41,13 @@
             ></path>
           </svg>
         </div>
-        <div class="container-fluid logoSvg domande">
+        <!-- logo ? per info -->
+        <div
+          class="container-fluid logoSvg domande"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasTopDomande"
+          aria-controls="offcanvasTop"
+        >
           <svg class="logoSvg colorSvg">
             <path
               d="M5.193,0C0.538,0,0,2.673,0,4.684a0.978,0.978,0,0,0,1.955,0c0-1.648.225-2.729,3.238-2.729,2.852,0,2.852,1.45,2.852,2.729a1.951,1.951,0,0,1-1.29,1.675l-0.216.083C4.8,7.108,3.809,7.531,3.809,8.472v3.5a0.978,0.978,0,1,0,1.955,0V8.887c0.4-.209,1.152-0.5,1.474-0.62l0.224-.085A3.831,3.831,0,0,0,10,4.684C10,3.526,10,0,5.193,0Z"
@@ -46,6 +57,7 @@
             ></path>
           </svg>
         </div>
+        <!-- logo EA -->
         <a href=" " class="container-fluid ea margin0padding0">
           <svg
             class="colorSvg"
@@ -57,6 +69,147 @@
           </svg>
         </a>
       </nav>
+      <!-- offcanvas top nera per logo utente -->
+      <div
+        class="offcanvas offcanvas-top"
+        tabindex="-1"
+        id="offcanvasTop"
+        aria-labelledby="offcanvasTopLabel"
+      >
+        <div class="offcanvas-header offheaderblack">
+          <button
+            type="button"
+            class="btn-close bodynavclose"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+            style="height: 16px; width: 16px"
+          >
+            <svg
+              x="0px"
+              y="0px"
+              viewBox="0 0 16 16"
+              style="enable-background: new 0 0 16 16"
+            >
+              <path
+                d="M13.4,11.9l-4-4l3.9-3.9c0.6-0.6,0.7-1.3,0.3-1.7c-0.4-0.4-1.2-0.3-1.7,
+    0.3L8,6.6l-4-4 C3.5,2.1,2.7,1.9,2.3,2.3C1.9,2.7,2.1,3.5,2.6,4.1l4,
+    4l-3.9,3.9c-0.6,0.6-0.7,1.3-0.3,1.7c0.4,0.4,1.2,0.3,1.7-0.3L8,9.4l4,
+    4 c0.6,0.6,1.3,0.7,1.7,0.3C14.1,13.3,13.9,12.5,13.4,11.9z"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <!-- body UTENTE offcanvasnera top -->
+        <div class="offcanvas-body">
+          <div class="container-fluid body2offtop">
+            <a href="" class="accediCreaAccount" id="accediCreaAccount">
+              <img
+                class="img-fluid imgAccedi"
+                src="https://media.contentapi.ea.com/content/dam/eacom/common/200429_global-nav/eaglobalnav-iconsignin.svg"
+                alt=""
+              />
+              <span class="accediCrea">Accedi</span>
+            </a>
+            <a href="" class="accediCreaAccount">
+              <img
+                class="img-fluid imgAccedi"
+                src="https://media.contentapi.ea.com/content/dam/eacom/common/200429_global-nav/eaglobalnav-iconregister.svg"
+                alt=""
+              />
+              <span class="accediCrea">Crea Account</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- offcanvas top nera per logo DOMANDE -->
+      <div
+        class="offcanvas offcanvas-top"
+        tabindex="-1"
+        id="offcanvasTopDomande"
+        aria-labelledby="offcanvasTopLabel"
+      >
+        <div class="offcanvas-header headerDomande">
+          <p style="color: #f1f1f1">Ti serve aiuto?</p>
+
+          <span>
+            <button
+              type="button"
+              class="btn-close bodynavclose domandeClose"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+              style="height: 16px; width: 16px"
+            >
+              <svg
+                x="0px"
+                y="0px"
+                viewBox="0 0 16 16"
+                style="enable-background: new 0 0 16 16"
+              >
+                <path
+                  d="M13.4,11.9l-4-4l3.9-3.9c0.6-0.6,0.7-1.3,0.3-1.7c-0.4-0.4-1.2-0.3-1.7,
+    0.3L8,6.6l-4-4 C3.5,2.1,2.7,1.9,2.3,2.3C1.9,2.7,2.1,3.5,2.6,4.1l4,
+    4l-3.9,3.9c-0.6,0.6-0.7,1.3-0.3,1.7c0.4,0.4,1.2,0.3,1.7-0.3L8,9.4l4,
+    4 c0.6,0.6,1.3,0.7,1.7,0.3C14.1,13.3,13.9,12.5,13.4,11.9z"
+                ></path>
+              </svg>
+            </button>
+          </span>
+        </div>
+
+        <!-- body DOMANDE offcanvasnera top -->
+        <div class="offcanvas-body">
+          <div class="container-fluid body2offtop">
+            <a href="" class="accediCreaAccount" id="accediCreaAccount">
+              <img
+                class="img-fluid imgAccedi"
+                src="https://media.contentapi.ea.com/content/dam/eacom/common/200429_global-nav/ea-medallion-white.svg"
+                alt=""
+              />
+              <span class="accediCrea">Verifica il mio accesso EA</span>
+            </a>
+            <a href="" class="accediCreaAccount">
+              <img
+                class="img-fluid imgAccedi"
+                src="https://media.contentapi.ea.com/content/dam/eacom/common/200429_global-nav/eaglobalnav-iconlink-white.svg"
+                alt=""
+              />
+              <span class="accediCrea"
+                >Collegare gli account di una piattaforma al tuo account
+                EA</span
+              >
+            </a>
+          </div>
+          <div class="container-fluid body2offtop" style="margin-top: 24px">
+            <a href="" class="accediCreaAccount" id="accediCreaAccount">
+              <img
+                class="img-fluid imgAccedi"
+                src="https://media.contentapi.ea.com/content/dam/eacom/common/200429_global-nav/ea-medallion-white.svg"
+                alt=""
+              />
+              <span class="accediCrea">Come riscattare un codice</span>
+            </a>
+            <a href="" class="accediCreaAccount">
+              <img
+                class="img-fluid imgAccedi"
+                src="https://media.contentapi.ea.com/content/dam/eacom/common/200429_global-nav/eaglobalnav-iconalert-white.svg"
+                alt=""
+              />
+              <span class="accediCrea">Non riesco a giocare online</span>
+            </a>
+          </div>
+
+          <p style="text-align: center; margin-bottom: 0%;">
+            Non hai trovato ciò che cerchi? Vai su
+            <a href="">Aiuto EA</a>
+            ","
+            <a href="">Answers HQ</a>
+            " oder die "
+            <a href="">Forum EA</a>
+          </p>
+        </div>
+        
+      </div>
+
       <!-- navbar bianca: buttonSidebar + menù -->
       <nav
         class="navbar bg-body-tertiary navBianca sticky-xxl-top"
@@ -101,7 +254,7 @@
           </button>
           <!-- sidebar -->
           <div
-            class="offcanvas offcanvas-start overflow-y-scroll"
+            class="offcanvas offcanvasMod offcanvas-start overflow-y-scroll"
             tabindex="-1"
             id="offcanvasExample"
             aria-labelledby="offcanvasExampleLabel"
@@ -140,7 +293,7 @@
                 class="container text-center"
                 style="padding-left: 0px; padding-right: 0px"
               >
-                <div class="row imgGrandeSide">
+                <div class="row imgGrandeSide relative">
                   <div class="col">
                     <a href=" ">
                       <img
@@ -159,7 +312,7 @@
                   </a>
                 </div>
                 <div class="row column-gap-xl-2">
-                  <div class="col">
+                  <div class="col relative">
                     <a href="">
                       <img
                         class="img-fluid"
@@ -167,8 +320,15 @@
                         alt=""
                       />
                     </a>
+                    <a href="">
+                      <img
+                        class="figure-img position-absolute over"
+                        src="https://media.contentapi.ea.com/content/dam/gin/common/logos/fifa23-logo-white-stacked.svg"
+                        alt=""
+                      />
+                    </a>
                   </div>
-                  <div class="col">
+                  <div class="col relative">
                     <a href="">
                       <img
                         class="img-fluid"
@@ -176,10 +336,17 @@
                         alt=""
                       />
                     </a>
+                    <a href="">
+                      <img
+                        class="figure-img position-absolute over"
+                        src="https://media.contentapi.ea.com/content/dam/gin/common/logos/f122-gamebox-logo.png"
+                        alt=""
+                      />
+                    </a>
                   </div>
                 </div>
                 <div class="row column-gap-xl-2">
-                  <div class="col gy-xxl-4">
+                  <div class="col gy-xxl-4 relative">
                     <a href="">
                       <img
                         class="img-fluid"
@@ -187,8 +354,15 @@
                         alt=""
                       />
                     </a>
+                    <a href="">
+                      <img
+                        class="figure-img position-absolute over"
+                        src="https://media.contentapi.ea.com/content/dam/gin/common/logos/m23-gamebox-logo.svg"
+                        alt=""
+                      />
+                    </a>
                   </div>
-                  <div class="col gy-xxl-4">
+                  <div class="col gy-xxl-4 relative">
                     <a href="">
                       <img
                         class="img-fluid"
@@ -196,10 +370,17 @@
                         alt=""
                       />
                     </a>
+                    <a href="">
+                      <img
+                        class="figure-img position-absolute over"
+                        src="https://media.contentapi.ea.com/content/dam/gin/common/logos/apex-legends-mono-logo.svg"
+                        alt=""
+                      />
+                    </a>
                   </div>
                 </div>
                 <div class="row column-gap-xl-2" style="margin-bottom: 150px">
-                  <div class="col gy-xxl-4">
+                  <div class="col gy-xxl-4 relative">
                     <a href="">
                       <img
                         class="img-fluid"
@@ -207,12 +388,26 @@
                         alt=""
                       />
                     </a>
+                    <a href="">
+                      <img
+                        class="figure-img position-absolute over overBattleSims"
+                        src="	https://media.contentapi.ea.com/content/dam/gin/common/logos/battlefield-2042-mono-logo-svg.svg"
+                        alt=""
+                      />
+                    </a>
                   </div>
-                  <div class="col gy-xxl-4">
+                  <div class="col gy-xxl-4 relative">
                     <a href="">
                       <img
                         class="img-fluid"
                         src="https://media.contentapi.ea.com/content/dam/gin/images/2017/01/the-sims-4-keyart.jpg.adapt.crop1x1.767w.jpg"
+                        alt=""
+                      />
+                    </a>
+                    <a href="">
+                      <img
+                        class="figure-img position-absolute over overBattleSims"
+                        src="https://media.contentapi.ea.com/content/dam/gin/common/logos/the-sims-4-mono-logo.png"
                         alt=""
                       />
                     </a>
@@ -240,26 +435,30 @@
           id="main_nav"
           style="display: flex"
         >
-          <a class="nav-link" href="#"> Giochi </a>
+          <a class="nav-link redHover" href="#"> Giochi </a>
           <ul class="dropdown-menu dropdown-menu-start fade-down">
             <div style="display: flex; padding: 20px">
               <div>
                 <a class="dropdown-item" href="#"><h4>Esplora i Giochi</h4></a>
-                <a class="dropdown-item" href="#"> Ultimi Giochi</a>
-                <a class="dropdown-item" href="#"> Prossimamente</a>
-                <a class="dropdown-item" href="#"> giochi gratuiti</a>
-                <a class="dropdown-item" href="#"> EA SPORTS </a>
-                <a class="dropdown-item" href="#"> EA ORIGINALS</a>
-                <a class="dropdown-item" href="#"> Libreiria dei giochi </a>
-                <a class="dropdown-item" href="#"> offerte EA app </a>
+                <a class="dropdown-item redHover" href="#"> Ultimi Giochi</a>
+                <a class="dropdown-item redHover" href="#"> Prossimamente</a>
+                <a class="dropdown-item redHover" href="#"> giochi gratuiti</a>
+                <a class="dropdown-item redHover" href="#"> EA SPORTS </a>
+                <a class="dropdown-item redHover" href="#"> EA ORIGINALS</a>
+                <a class="dropdown-item redHover" href="#">
+                  Libreiria dei giochi
+                </a>
+                <a class="dropdown-item redHover" href="#"> offerte EA app </a>
               </div>
               <div>
                 <a class="dropdown-item" href="#"><h4>Piattaforme</h4></a>
-                <a class="dropdown-item" href="#"> PC</a>
-                <a class="dropdown-item" href="#"> PlayStation®5 </a>
-                <a class="dropdown-item" href="#"> Xbox Series X </a>
-                <a class="dropdown-item" href="#"> Nintendo Switch™ </a>
-                <a class="dropdown-item" href="#"> Cellulari </a>
+                <a class="dropdown-item redHover" href="#"> PC</a>
+                <a class="dropdown-item redHover" href="#"> PlayStation®5 </a>
+                <a class="dropdown-item redHover" href="#"> Xbox Series X </a>
+                <a class="dropdown-item redHover" href="#">
+                  Nintendo Switch™
+                </a>
+                <a class="dropdown-item redHover" href="#"> Cellulari </a>
               </div>
             </div>
           </ul>
@@ -274,16 +473,20 @@
         >
           <a class="nav-link" href="#"> Altre Esperienze </a>
           <ul class="dropdown-menu dropdown-menu-start fade-down">
-            <li><a class="dropdown-item" href="#"> EA Play</a></li>
-            <li><a class="dropdown-item" href="#"> l'EA app </a></li>
+            <li><a class="dropdown-item redHover" href="#"> EA Play</a></li>
+            <li><a class="dropdown-item redHover" href="#"> l'EA app </a></li>
             <li>
-              <a class="dropdown-item" href="#"> Competizioni videoludiche</a>
+              <a class="dropdown-item redHover" href="#">
+                Competizioni videoludiche</a
+              >
             </li>
             <li>
-              <a class="dropdown-item" href="#"> Diretta di EA Play </a>
+              <a class="dropdown-item redHover" href="#">
+                Diretta di EA Play
+              </a>
             </li>
             <li>
-              <a class="dropdown-item" href="#"> Test di gioco </a>
+              <a class="dropdown-item redHover" href="#"> Test di gioco </a>
             </li>
           </ul>
           <div id="pseudo"></div>
@@ -297,17 +500,19 @@
         >
           <a class="nav-link" href="#"> Informazioni </a>
           <ul class="dropdown-menu dropdown-menu-start fade-down">
-            <li><a class="dropdown-item" href="#"> Società</a></li>
-            <li><a class="dropdown-item" href="#"> EA studi </a></li>
+            <li><a class="dropdown-item redHover" href="#"> Società</a></li>
+            <li><a class="dropdown-item redHover" href="#"> EA studi </a></li>
             <li>
-              <a class="dropdown-item" href="#"> lavora con noi</a>
+              <a class="dropdown-item redHover" href="#"> lavora con noi</a>
             </li>
             <li>
-              <a class="dropdown-item" href="#"> la nostra tecnologia </a>
+              <a class="dropdown-item redHover" href="#">
+                la nostra tecnologia
+              </a>
             </li>
-            <li><a class="dropdown-item" href="#"> EA partners</a></li>
-            <li><a class="dropdown-item" href="#"> notizie </a></li>
-            <li><a class="dropdown-item" href="#"> inside EA</a></li>
+            <li><a class="dropdown-item redHover" href="#"> EA partners</a></li>
+            <li><a class="dropdown-item redHover" href="#"> notizie </a></li>
+            <li><a class="dropdown-item redHover" href="#"> inside EA</a></li>
           </ul>
           <div id="pseudo"></div>
         </div>
@@ -321,21 +526,23 @@
           <a class="nav-link" href="#"> Impegni </a>
           <ul class="dropdown-menu dropdown-menu-start fade-down">
             <li>
-              <a class="dropdown-item" href="#"> I nostri impegni </a>
+              <a class="dropdown-item redHover" href="#"> I nostri impegni </a>
             </li>
             <li>
-              <a class="dropdown-item" href="#"> gioco positivo </a>
+              <a class="dropdown-item redHover" href="#"> gioco positivo </a>
             </li>
             <li>
-              <a class="dropdown-item" href="#"> diversità inclusione</a>
+              <a class="dropdown-item redHover" href="#">
+                diversità inclusione</a
+              >
             </li>
             <li>
-              <a class="dropdown-item" href="#"> impatto sociale </a>
+              <a class="dropdown-item redHover" href="#"> impatto sociale </a>
             </li>
             <li>
-              <a class="dropdown-item" href="#"> persone e cultura</a>
+              <a class="dropdown-item redHover" href="#"> persone e cultura</a>
             </li>
-            <li><a class="dropdown-item" href="#"> ambiente </a></li>
+            <li><a class="dropdown-item redHover" href="#"> ambiente </a></li>
           </ul>
           <div id="pseudo"></div>
         </div>
@@ -348,16 +555,18 @@
         >
           <a class="nav-link" href="#"> Risorse </a>
           <ul class="dropdown-menu dropdown-menu-start fade-down">
-            <li><a class="dropdown-item" href="#"> aiuto</a></li>
-            <li><a class="dropdown-item" href="#"> forum </a></li>
+            <li><a class="dropdown-item redHover" href="#"> aiuto</a></li>
+            <li><a class="dropdown-item redHover" href="#"> forum </a></li>
             <li>
-              <a class="dropdown-item" href="#"> filtro famiglia</a>
+              <a class="dropdown-item redHover" href="#"> filtro famiglia</a>
             </li>
             <li>
-              <a class="dropdown-item" href="#"> accessibilità</a>
+              <a class="dropdown-item redHover" href="#"> accessibilità</a>
             </li>
-            <li><a class="dropdown-item" href="#"> Stampa</a></li>
-            <li><a class="dropdown-item" href="#"> investitori </a></li>
+            <li><a class="dropdown-item redHover" href="#"> Stampa</a></li>
+            <li>
+              <a class="dropdown-item redHover" href="#"> investitori </a>
+            </li>
           </ul>
           <div id="pseudo"></div>
         </div>
@@ -380,22 +589,6 @@
         "
       />
     </div>
-    <!-- banner sotto img grande -->
-    <div class="imgBanner">
-      <img
-        class="img-fluid"
-        src="https://media.contentapi.ea.com/content/dam/ea/fifa/fifa-23/shared-assets/common/f23-product-conversion-bg-xl.jpg.adapt.320w.jpg"
-        alt=""
-        srcset="
-          https://media.contentapi.ea.com/content/dam/ea/fifa/fifa-23/shared-assets/common/f23-product-conversion-bg-xl.jpg.adapt.320w.jpg   320w,
-          https://media.contentapi.ea.com/content/dam/ea/fifa/fifa-23/shared-assets/common/f23-product-conversion-bg-xl.jpg.adapt.768w.jpg   768w,
-          https://media.contentapi.ea.com/content/dam/ea/fifa/fifa-23/shared-assets/common/f23-product-conversion-bg-xl.jpg.adapt.1024w.jpg 1024w,
-          https://media.contentapi.ea.com/content/dam/ea/fifa/fifa-23/shared-assets/common/f23-product-conversion-bg-xl.jpg.adapt.1456w.jpg 1320w,
-          https://media.contentapi.ea.com/content/dam/ea/fifa/fifa-23/shared-assets/common/f23-product-conversion-bg-xl.jpg.adapt.1920w.jpg 1456w
-        "
-      />
-    </div>
-
     <!-- Fine Header Matteo -->
 
     <!-- Giochi in Evidenza Stefano -->
