@@ -20,12 +20,57 @@
   background-color: #161616;
   width: 100%;
 }
-.btn-close{
+.headerDomande{
+justify-content: center;
+align-items: baseline;
+position: relative;
+}
+.domandeClose{
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+
+}
+#closeSideBar{
+  --bs-btn-close-bg: none;
+  fill:#161616
+}
+.bodynavclose{
   --bs-btn-close-bg: none;
   fill: #f3f3f3;
+  --bs-btn-close-focus-shadow: none;
 }
+.accediCrea{
+  font-family:inherit;
+  padding: 0.5em 0 0 0;
+  text-align: center;
+  color:#f3f3f3
+}
+.imgAccedi{
+  max-width: 36px;
+  min-width: 36px;
+  width: 36px;
+}
+.accediCreaAccount{
+  width: calc(19% - 24px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s ease-in-out;
+}
+.accediCreaAccount:hover{
+  transform: translateY(-5px);
+}
+
+
 .offheaderblack{
   justify-content: end;
+}
+.body2offtop{
+ display: flex;
+ justify-content: center;
+ align-items: center;
 }
 
 .autohide {

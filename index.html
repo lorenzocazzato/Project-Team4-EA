@@ -41,7 +41,13 @@
             ></path>
           </svg>
         </div>
-        <div class="container-fluid logoSvg domande">
+        <!-- logo ? per info -->
+        <div
+          class="container-fluid logoSvg domande"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasTopDomande"
+          aria-controls="offcanvasTop"
+        >
           <svg class="logoSvg colorSvg">
             <path
               d="M5.193,0C0.538,0,0,2.673,0,4.684a0.978,0.978,0,0,0,1.955,0c0-1.648.225-2.729,3.238-2.729,2.852,0,2.852,1.45,2.852,2.729a1.951,1.951,0,0,1-1.29,1.675l-0.216.083C4.8,7.108,3.809,7.531,3.809,8.472v3.5a0.978,0.978,0,1,0,1.955,0V8.887c0.4-.209,1.152-0.5,1.474-0.62l0.224-.085A3.831,3.831,0,0,0,10,4.684C10,3.526,10,0,5.193,0Z"
@@ -51,6 +57,7 @@
             ></path>
           </svg>
         </div>
+        <!-- logo EA -->
         <a href=" " class="container-fluid ea margin0padding0">
           <svg
             class="colorSvg"
@@ -69,29 +76,138 @@
         id="offcanvasTop"
         aria-labelledby="offcanvasTopLabel"
       >
-        <div class="offcanvas-header offheaderblack ">
+        <div class="offcanvas-header offheaderblack">
           <button
             type="button"
             class="btn-close bodynavclose"
             data-bs-dismiss="offcanvas"
             aria-label="Close"
             style="height: 16px; width: 16px"
-          >   
-          <svg
-          x="0px"
-          y="0px"
-          viewBox="0 0 16 16"
-          style="enable-background: new 0 0 16 16"
-        >
-          <path
-            d="M13.4,11.9l-4-4l3.9-3.9c0.6-0.6,0.7-1.3,0.3-1.7c-0.4-0.4-1.2-0.3-1.7,
+          >
+            <svg
+              x="0px"
+              y="0px"
+              viewBox="0 0 16 16"
+              style="enable-background: new 0 0 16 16"
+            >
+              <path
+                d="M13.4,11.9l-4-4l3.9-3.9c0.6-0.6,0.7-1.3,0.3-1.7c-0.4-0.4-1.2-0.3-1.7,
     0.3L8,6.6l-4-4 C3.5,2.1,2.7,1.9,2.3,2.3C1.9,2.7,2.1,3.5,2.6,4.1l4,
     4l-3.9,3.9c-0.6,0.6-0.7,1.3-0.3,1.7c0.4,0.4,1.2,0.3,1.7-0.3L8,9.4l4,
     4 c0.6,0.6,1.3,0.7,1.7,0.3C14.1,13.3,13.9,12.5,13.4,11.9z"
-          ></path>
-        </svg></button>
+              ></path>
+            </svg>
+          </button>
         </div>
-        <div class="offcanvas-body">...</div>
+        <!-- body UTENTE offcanvasnera top -->
+        <div class="offcanvas-body">
+          <div class="container-fluid body2offtop">
+            <a href="" class="accediCreaAccount" id="accediCreaAccount">
+              <img
+                class="img-fluid imgAccedi"
+                src="https://media.contentapi.ea.com/content/dam/eacom/common/200429_global-nav/eaglobalnav-iconsignin.svg"
+                alt=""
+              />
+              <span class="accediCrea">Accedi</span>
+            </a>
+            <a href="" class="accediCreaAccount">
+              <img
+                class="img-fluid imgAccedi"
+                src="https://media.contentapi.ea.com/content/dam/eacom/common/200429_global-nav/eaglobalnav-iconregister.svg"
+                alt=""
+              />
+              <span class="accediCrea">Crea Account</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- offcanvas top nera per logo DOMANDE -->
+      <div
+        class="offcanvas offcanvas-top"
+        tabindex="-1"
+        id="offcanvasTopDomande"
+        aria-labelledby="offcanvasTopLabel"
+      >
+        <div class="offcanvas-header headerDomande">
+          <p style="color: #f1f1f1">Ti serve aiuto?</p>
+
+          <span>
+            <button
+              type="button"
+              class="btn-close bodynavclose domandeClose"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+              style="height: 16px; width: 16px"
+            >
+              <svg
+                x="0px"
+                y="0px"
+                viewBox="0 0 16 16"
+                style="enable-background: new 0 0 16 16"
+              >
+                <path
+                  d="M13.4,11.9l-4-4l3.9-3.9c0.6-0.6,0.7-1.3,0.3-1.7c-0.4-0.4-1.2-0.3-1.7,
+    0.3L8,6.6l-4-4 C3.5,2.1,2.7,1.9,2.3,2.3C1.9,2.7,2.1,3.5,2.6,4.1l4,
+    4l-3.9,3.9c-0.6,0.6-0.7,1.3-0.3,1.7c0.4,0.4,1.2,0.3,1.7-0.3L8,9.4l4,
+    4 c0.6,0.6,1.3,0.7,1.7,0.3C14.1,13.3,13.9,12.5,13.4,11.9z"
+                ></path>
+              </svg>
+            </button>
+          </span>
+        </div>
+
+        <!-- body DOMANDE offcanvasnera top -->
+        <div class="offcanvas-body">
+          <div class="container-fluid body2offtop">
+            <a href="" class="accediCreaAccount" id="accediCreaAccount">
+              <img
+                class="img-fluid imgAccedi"
+                src="https://media.contentapi.ea.com/content/dam/eacom/common/200429_global-nav/ea-medallion-white.svg"
+                alt=""
+              />
+              <span class="accediCrea">Verifica il mio accesso EA</span>
+            </a>
+            <a href="" class="accediCreaAccount">
+              <img
+                class="img-fluid imgAccedi"
+                src="https://media.contentapi.ea.com/content/dam/eacom/common/200429_global-nav/eaglobalnav-iconlink-white.svg"
+                alt=""
+              />
+              <span class="accediCrea"
+                >Collegare gli account di una piattaforma al tuo account
+                EA</span
+              >
+            </a>
+          </div>
+          <div class="container-fluid body2offtop" style="margin-top: 24px">
+            <a href="" class="accediCreaAccount" id="accediCreaAccount">
+              <img
+                class="img-fluid imgAccedi"
+                src="https://media.contentapi.ea.com/content/dam/eacom/common/200429_global-nav/ea-medallion-white.svg"
+                alt=""
+              />
+              <span class="accediCrea">Come riscattare un codice</span>
+            </a>
+            <a href="" class="accediCreaAccount">
+              <img
+                class="img-fluid imgAccedi"
+                src="https://media.contentapi.ea.com/content/dam/eacom/common/200429_global-nav/eaglobalnav-iconalert-white.svg"
+                alt=""
+              />
+              <span class="accediCrea">Non riesco a giocare online</span>
+            </a>
+          </div>
+
+          <p style="text-align: center; margin-bottom: 0%;">
+            Non hai trovato ciò che cerchi? Vai su
+            <a href="">Aiuto EA</a>
+            ","
+            <a href="">Answers HQ</a>
+            " oder die "
+            <a href="">Forum EA</a>
+          </p>
+        </div>
+        
       </div>
 
       <!-- navbar bianca: buttonSidebar + menù -->
