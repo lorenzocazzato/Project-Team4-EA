@@ -319,9 +319,19 @@ overflow: hidden;
   text-align: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin-top: 0.5em;
+  margin-bottom: 0px;
   font-size: 18px;
   line-height: 1.5;
   font-weight: 400;
+}
+.btnUniscitiOra{
+  color: #f3f3f3;
+  background-color: #ff4242;
+  border: #ff4242;
+  margin-left: 19%;
+  margin-top: 24px;
+  width: 160px;
+  height: 59px;
 }
 
 
