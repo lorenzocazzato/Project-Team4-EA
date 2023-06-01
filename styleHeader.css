@@ -1,0 +1,350 @@
+/* font dei testi */
+
+ @font-face {
+  font-family: "Electronic Arts Text";
+  src: url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.eot");
+  src: url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.svg#Electronic Arts Text")
+      format("svg");
+}
+/* componenti barra nera  */
+.offcanvas.offcanvas-top{
+  height: 440px;
+  max-height: 440px;
+  background-color: #161616;
+  width: 100%;
+}
+.headerDomande{
+justify-content: center;
+align-items: baseline;
+position: relative;
+}
+.domandeClose{
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+
+}
+#closeSideBar{
+  --bs-btn-close-bg: none;
+  fill:#161616
+  
+}
+.bodynavclose{
+  --bs-btn-close-bg: none;
+  fill: #f3f3f3;
+  --bs-btn-close-focus-shadow: none;
+}
+.accediCrea{
+  font-family:inherit;
+  padding: 0.5em 0 0 0;
+  text-align: center;
+  color:#f3f3f3
+}
+.imgAccedi{
+  max-width: 36px;
+  min-width: 36px;
+  width: 36px;
+}
+.accediCreaAccount{
+  width: calc(19% - 24px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s ease-in-out;
+}
+.accediCreaAccount:hover{
+  transform: translateY(-5px);
+}
+
+
+.offheaderblack{
+  justify-content: end;
+}
+.body2offtop{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.autohide {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1030;
+}
+.offcanvas.hiding, .offcanvas.show, .offcanvas.showing{
+  transition: transform .5s cubic-bezier(.5,.25,.015,1);
+}
+.darkColor{
+  background-color: #161616;
+  z-index: 2000;
+  padding: 0px 28px 0 0;
+}
+.divTextNav{
+  cursor: pointer;
+}
+.margin0padding0{
+  margin: 0;
+  padding: 0;
+}
+.height40px{
+  height: 40px;
+  width: auto;
+}
+.logoSvg{
+  height: 24px;
+  width: 24px;
+  cursor: pointer;
+}
+.colorSvg{
+  fill: #f3f3f3;
+}
+.logoUtente{
+  padding: 4px 0px 0px 5px;
+  margin-right: 28px;
+}
+.domande{
+  padding: 4px 0px 0px 5px;
+  margin-right: 13px;
+  margin-left: 12px;
+}
+.ea{
+  margin-left: 20px;
+  height: 40px;
+  width: 40px;
+}
+/* comportamento navbar autohide */
+.scrolled-down {
+  transform: translateY(-40px);
+  transition: all 0.3s ease-in-out;
+}
+
+.scrolled-up {
+  transform: translateY(0);
+  transition: all 0.3s ease-in-out;
+}
+
+/* componenti navbar bianca */
+.btn{
+  height: 100%;
+  width: 100%;
+  --bs-btn-border-width: transparent; 
+  
+}
+.btn > .bottone3punti{
+  pointer-events: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+  color: #161616;
+}
+
+.btn:hover > .bottone3punti{
+  transform: scale(1.4, 1.4) rotate(-90deg);
+  fill: #f50c0c;
+  transition: fill .7s,transform .3s;
+  transition-duration: 0.7s, 0.3s;
+  transition-timing-function: ease, ease;
+  transition-delay: 0s, 0s;
+  transition-property: fill, transform;
+ 
+}
+.imgElec{
+  height: 56px;
+  width: 200px;
+  padding: 0px;
+  margin: 0 0 0 20px ;
+}
+.burgerMenù{
+  padding: 0px;
+  margin: 0px;
+  height: 56px;
+  width: 20px;
+}
+a{
+  color: black;
+  text-decoration: none;
+}
+.divTextNav{
+  justify-content: center;
+  max-width: max-content;
+  margin: 0 1.5% ;
+}
+.dropdown-menu{
+  --bs-dropdown-link-active-bg: none;
+}
+
+#pseudo{
+  height: 0.4em;
+  width: 0.8em;
+  position: relative;
+  margin-left: 5px;
+ 
+}
+#pseudo::before,
+#pseudo::after{
+  border-top: 0.1em solid rgb(0, 0, 0);
+  height: 0.1em;
+  width: 0.5em;
+  content: "";
+  position: absolute;
+  display: block;
+  top: 50%;
+  transition: 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+
+}
+#pseudo::before{
+  transform: rotate(45deg);
+  left: 0;
+}
+#pseudo::after{
+  transform: rotate(-45deg);
+  right: 0;
+}
+.divTextNav:hover #pseudo::before{
+  transform: rotate(-45deg);
+  border-color: #f50c0c;
+}
+.divTextNav:hover #pseudo::after{
+  transform: rotate(45deg);
+  border-color: #f50c0c;
+}
+.divTextNav:hover{
+  color: #f50c0c;
+}
+.redHover:hover{
+  color: #f50c0c;
+  background-color: transparent;
+}
+.giochiPiattaforme:hover{
+  cursor: default;
+  background-color: transparent;
+}
+
+@media all and (min-width: 992px) {
+	.navbar .dropdown-menu-end{ right:0; left: auto;  }
+	.navbar .nav-item .dropdown-menu{  display:block; opacity: 0;  visibility: hidden; transition:.3s; margin-top:0;  }
+	/* .navbar .nav-item:hover .nav-link{ color: #fff;  } */
+	.navbar .dropdown-menu.fade-down{ top:80%; transform: rotateX(-75deg); transform-origin: 0% 0%; margin-top: 8px; }
+	.navbar .dropdown-menu.fade-up{ top:180%;  }
+	.navbar .nav-item:hover .dropdown-menu{ transition: .3s; opacity:1; visibility:visible; top:100%; transform: rotateX(0deg); background-color: #ffffffe3; }
+}
+/*componenti sidebar */
+.offcanvas-header{
+  margin-top: 82px;
+  margin-bottom: 47px;
+  height: 27px;
+  padding-left: 0px;
+}
+.offcanvas-title{
+  color: #a3a3a3;
+  font-weight: 700;
+}
+.offcanvas-title:hover {
+  color: #f50c0c;
+}
+.sidebarBtnSVG:hover {
+  fill: #f50c0c;
+}
+.sidebarBtnSVG{
+  vertical-align: top;
+}
+#closeSideBar{
+  --bs-btn-close-focus-shadow: 0 0 0 0 0;
+  font-size: small;
+  --bs-btn-close-bg: none;
+  --bs-btn-close-color: #161616;
+  --bs-btn-close-opacity: 1;
+}
+.offcanvas{
+  bottom: -100vh;
+  padding-left: 32px;
+  padding-right: 32px;
+  right: -17px;
+}
+.offcanvasMod{
+  &::-webkit-scrollbar {
+  width: 0px;
+}
+}
+.scroll{
+  overflow-y: scroll;
+}
+.imgGrandeSide{
+  margin-bottom:32px ;
+}
+.relative{
+  position: relative;
+}
+.sideBody{
+  position: relative;
+}
+.over{
+  max-height: 19.5%;
+  filter: drop-shadow(8px 7px 23px #000);
+  top: 41%;
+  left: 38%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.overBattleSims{
+  left: 23%;
+}
+.relative:hover .over{
+  transform: scale(1.1);
+}
+/* imagini header */
+.imgHeader{
+  margin-top: 55px;
+}
+.imgBanner{
+max-height: 112px;
+overflow: hidden;
+}
+.fifa23{
+  font-size: 54px;
+  letter-spacing: normal;
+  line-height: 1.15;
+  color:#f3f3f3;
+  padding-left: 8%;
+  padding-right: 60%;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
+}
+.h6EA{
+  color:#f3f3f3;
+  padding-left: 8%;
+  padding-right: 60%;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 0.5em;
+  margin-bottom: 0px;
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+.btnUniscitiOra{
+  color: #f3f3f3;
+  background-color: #ff4242;
+  border: #ff4242;
+  margin-left: 19%;
+  margin-top: 24px;
+  width: 160px;
+  height: 59px;
+}
+
+
+

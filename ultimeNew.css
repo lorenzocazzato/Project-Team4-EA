@@ -1,0 +1,110 @@
+@font-face {
+  font-family: "Electronic Arts Text";
+  src: url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.eot");
+  src: url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/48656eabd3fef6464367d956315c749a.svg#Electronic Arts Text")
+      format("svg");
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.ultimeNewsTitle {
+  display: flex;
+  justify-content: center;
+  font-size: 44px;
+  color: #161616;
+}
+.spazioSopra {
+  padding: 50px;
+}
+.titleCard {
+  color: #ff4747;
+  font-size: 16px;
+}
+
+.dateYear {
+  font-size: 16px;
+  color: #161616;
+}
+
+.subTitle {
+  font-size: 24px;
+  color: #161616;
+}
+
+.prova {
+  padding: 0;
+  border: none;
+  border-radius: 0%;
+}
+
+.pippo {
+  margin-top: 1rem;
+}
+
+.containerBtn {
+  display: flex;
+  justify-content: center;
+  gap: 2px;
+  border-bottom: solid 1px lightgray;
+}
+
+.cardSection {
+  display: flex;
+  border: 0px;
+  background: transparent;
+  align-items: center;
+  height: 100%;
+  font-size: 1rem;
+  padding: 10px;
+  font-weight: 500;
+  cursor: pointer;
+  border-right: 1px solid lightgray;
+}
+.cardSection:active {
+  border-bottom: 3px solid #ff4747;
+  background: #dedede;
+}
+.cardSection:hover {
+  background: #dedede;
+}
+.cardSection:focus {
+  border-bottom: 3px solid #ff4747;
+  background: #dedede;
+}
+
+.provaShadow {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: 0.3s;
+}
+
+.provaShadow:hover {
+  transform: translate(0, -10px);
+  box-shadow: 0 10px 14px 0 rgba(0, 0, 0, 0.6),
+    0 10px 25px 0 rgba(0, 0, 0, 0.26);
+}
+
+.none {
+  display: none;
+}
+
+.gabryBtn {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.gabry {
+  display: flex;
+  justify-content: center;
+}
