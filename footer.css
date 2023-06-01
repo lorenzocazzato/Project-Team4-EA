@@ -13,6 +13,11 @@
       format("svg");
 }
 
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+
 button {
   width: fit-content;
   color: #161616;
@@ -40,6 +45,7 @@ button:hover {
   text-align: left;
   align-items: center;
   justify-content: center;
+  height: 100px;
 }
 .alert h3 {
   font-size: 1.8rem;
@@ -66,11 +72,12 @@ button:hover {
 .container-elements {
   top: 0;
   bottom: 0;
-  width: 35vw;
+  width: 40vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   left: var(--margin);
+  margin-left: 300px;
 }
 .parentDisclaimer {
   flex: 1;
@@ -80,13 +87,10 @@ button:hover {
 }
 .container-bgc-img {
   display: flex;
-
   justify-content: space-evenly;
   flex-direction: column;
-  align-items: flex-start;
   text-align: left;
-  height: 40vh;
-  padding-left: 50px;
+  height: 50vh;
   background-repeat: no-repeat;
   background-position: unset;
   background-size: cover;
